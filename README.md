@@ -5,10 +5,9 @@ presentation production, 3D/AR compositing, audio work, VTuber workflows, MMD,
 and AI-assisted review automation.
 
 This public distribution repository contains release-safe product information,
-catalog screenshots, and installer releases. The source repository is:
+catalog screenshots, and installer releases.
 
-- Source: https://github.com/kuoungseok/tigercapture-src
-- Installer: https://github.com/kuoungseok/tigercapture/releases/latest
+- Installer release: https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.1
 - Product catalog page: https://kuoungseok.github.io/tigercapture/
 
 ## Current Public Build

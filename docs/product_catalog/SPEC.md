@@ -109,5 +109,5 @@ without moving through several disconnected tools.
 ## Release Notes Boundary
 
 This public distribution repository should contain release-safe pages,
-screenshots, installers, and metadata. Development source lives in the source
-repository, and installer binaries are distributed through GitHub Releases.
+screenshots, installers, and metadata. Installer binaries are distributed
+through GitHub Releases.
