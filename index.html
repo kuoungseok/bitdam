@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TigerCapture Product Catalog</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --panel: #151b24;
+      --panel-2: #10161f;
+      --text: #eef3ff;
+      --muted: #9da9bd;
+      --line: #283244;
+      --accent: #68d5ff;
+      --accent-2: #8dffb0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    header {
+      padding: 56px 24px 34px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #151d2a 0%, #0d1117 100%);
+    }
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(38px, 6vw, 74px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 42px 0 16px;
+      font-size: clamp(24px, 3vw, 38px);
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #1b2635;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .button.primary {
+      border-color: #3285a4;
+      background: #0f5f7a;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .slides {
+      display: grid;
+      gap: 28px;
+      padding: 0 0 56px;
+    }
+    figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel-2);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #080b10;
+    }
+    figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 11px 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .num {
+      color: var(--accent-2);
+      font-weight: 800;
+    }
+    code {
+      color: #d7e4ff;
+      background: #111827;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    footer {
+      padding: 28px 24px 46px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>TigerCapture</h1>
+      <p>
+        A local-first creator studio for capture, editing, presentation pages,
+        3D/AR compositing, actor workflows, audio work, and AI-assisted product
+        review automation.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/kuoungseok/tigercapture/releases/latest">Download installer</a>
+        <a class="button" href="https://github.com/kuoungseok/tigercapture-src">Source repository</a>
+        <a class="button" href="docs/product_catalog/SPEC.md">Public spec</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Product Spec</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Timeline Studio</h3>
+          <p>Media pool, timeline clips, transitions, effects, typography, color, audio, and export in one local project.</p>
+        </article>
+        <article class="card">
+          <h3>PPT Maker</h3>
+          <p>Presentation pages that can receive editor media, video, 3D, and typography actors through drag and drop.</p>
+        </article>
+        <article class="card">
+          <h3>AR / PBR / 3D</h3>
+          <p>3D asset preview and video compositing with depth-aware occlusion and preview/export parity targets.</p>
+        </article>
+        <article class="card">
+          <h3>Actors and MMD</h3>
+          <p>Live2D, Spine, VRM, VTuber, and MMD workflows are treated as editable actor surfaces.</p>
+        </article>
+        <article class="card">
+          <h3>Audio and Music Lab</h3>
+          <p>Sound Editor and MIDI-first Music Lab compose, render, update, and export audio through structured actions.</p>
+        </article>
+        <article class="card">
+          <h3>AI Actions</h3>
+          <p>Structured Python Action / MCP-style commands let local AI inspect and operate editor features safely.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Catalog Slides</h2>
+      <p>Slides are shown in the same order as the generated English product catalog output.</p>
+      <div class="slides">
+        <figure><img src="docs/product_catalog/slides_en/01_studio_overview.png" alt="Studio overview"><figcaption><span class="num">01</span><span>Studio Overview</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio surface"><figcaption><span class="num">02</span><span>Studio Surface</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/03_ai_workflow.png" alt="AI workflow"><figcaption><span class="num">03</span><span>AI Workflow</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/04_ppt_maker.png" alt="PPT Maker"><figcaption><span class="num">04</span><span>PPT Maker</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/05_media_pool.png" alt="Media pool"><figcaption><span class="num">05</span><span>Media Pool</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/06_timeline.png" alt="Timeline"><figcaption><span class="num">06</span><span>Timeline</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/07_effects.png" alt="Effects"><figcaption><span class="num">07</span><span>Effects</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/08_transitions.png" alt="Transitions"><figcaption><span class="num">08</span><span>Transitions</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/09_typography.png" alt="Typography"><figcaption><span class="num">09</span><span>Typography</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/10_keyframes.png" alt="Keyframes"><figcaption><span class="num">10</span><span>Keyframes</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/11_color.png" alt="Color"><figcaption><span class="num">11</span><span>Color</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/12_node_graph.png" alt="Node graph"><figcaption><span class="num">12</span><span>Node Graph</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/13_node_effects.png" alt="Node effects"><figcaption><span class="num">13</span><span>Node Effects</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/14_audio_workbench.png" alt="Audio workbench"><figcaption><span class="num">14</span><span>Audio Workbench</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/15_audio_curves.png" alt="Audio curves"><figcaption><span class="num">15</span><span>Audio Curves</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/16_live2d_spine.png" alt="Live2D and Spine"><figcaption><span class="num">16</span><span>Live2D / Spine</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/17_vrm.png" alt="VRM"><figcaption><span class="num">17</span><span>VRM</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/18_mmd.png" alt="MMD"><figcaption><span class="num">18</span><span>MMD</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/19_ar_pbr.png" alt="AR PBR"><figcaption><span class="num">19</span><span>AR / PBR</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/20_creator_assist.png" alt="Creator assist"><figcaption><span class="num">20</span><span>Creator Assist</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/21_export.png" alt="Export"><figcaption><span class="num">21</span><span>Export</span></figcaption></figure>
+        <figure><img src="docs/product_catalog/slides_en/22_closing.png" alt="Closing"><figcaption><span class="num">22</span><span>Closing</span></figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Installer SHA-256:
+      <code>B6A8A7A9424815DEF81FC730F2908E61D4CC5910A35926BFF03CD5963DA568B4</code>
+    </div>
+  </footer>
+</body>
+</html>
