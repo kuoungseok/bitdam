@@ -7,14 +7,14 @@ and AI-assisted review automation.
 This public distribution repository contains release-safe product information,
 catalog screenshots, and installer releases.
 
-- Installer release: https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.1
+- Installer release: https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2
 - Product catalog page: https://kuoungseok.github.io/tigercapture/
 
 ## Current Public Build
 
-- Installer: `TigerCapture-Setup-1.4.1.exe`
+- Installer: `TigerCapture-Setup-1.4.2.exe`
 - SHA-256:
-  `B6A8A7A9424815DEF81FC730F2908E61D4CC5910A35926BFF03CD5963DA568B4`
+  `75EE94D571F23755D77AD5FC5107A4D583BBE2B4CD04C58C3BBA64C48ABA86BF`
 - Platform: Windows x64
 - Release asset delivery: GitHub Releases
 
