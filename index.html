@@ -96,6 +96,80 @@
       margin: 0;
       font-size: 14px;
     }
+    .catalog-scroller {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.75fr);
+      gap: 28px;
+      align-items: start;
+      margin-top: 22px;
+      padding-bottom: 42px;
+    }
+    .catalog-stage {
+      position: sticky;
+      top: 18px;
+      z-index: 5;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #080b10;
+      box-shadow: 0 18px 56px rgba(0, 0, 0, 0.35);
+    }
+    .catalog-stage img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 260px;
+      object-fit: contain;
+      background: #080b10;
+      transition: opacity 180ms ease;
+    }
+    .catalog-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 15px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: rgba(13, 17, 23, 0.9);
+      font-size: 14px;
+    }
+    .catalog-steps {
+      display: grid;
+      gap: 12px;
+    }
+    .catalog-step {
+      min-height: 42vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--panel);
+      opacity: 0.62;
+      transition: border-color 180ms ease, opacity 180ms ease, background 180ms ease;
+    }
+    .catalog-step.is-active {
+      border-color: #3f8fb0;
+      background: #172234;
+      opacity: 1;
+    }
+    .catalog-step h3 {
+      margin-bottom: 7px;
+      font-size: clamp(20px, 2.4vw, 30px);
+    }
+    .catalog-step p {
+      margin: 0;
+      font-size: 15px;
+    }
+    .catalog-kicker {
+      color: var(--accent-2);
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
     .slides {
       display: grid;
       gap: 28px;
@@ -137,6 +211,30 @@
       padding: 28px 24px 46px;
       border-top: 1px solid var(--line);
       color: var(--muted);
+    }
+    @media (max-width: 760px) {
+      header {
+        padding: 34px 18px 26px;
+      }
+      .wrap {
+        width: min(100% - 22px, 1180px);
+      }
+      .catalog-scroller {
+        display: block;
+      }
+      .catalog-stage {
+        top: 0;
+        margin-bottom: 16px;
+        border-radius: 0 0 8px 8px;
+      }
+      .catalog-stage img {
+        max-height: 42vh;
+        min-height: 0;
+      }
+      .catalog-step {
+        min-height: 46vh;
+        margin-bottom: 14px;
+      }
     }
   </style>
 </head>
@@ -188,30 +286,123 @@
     </section>
 
     <section>
-      <h2>Catalog Slides</h2>
-      <p>Slides are shown in the same order as the current English product catalog output.</p>
-      <div class="slides">
-        <figure><img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio surface"><figcaption><span class="num">02</span><span>Studio Surface</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/03_ai_workflow.png" alt="AI workflow"><figcaption><span class="num">03</span><span>AI Workflow</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/04_ppt_maker.png" alt="PPT Maker"><figcaption><span class="num">04</span><span>PPT Maker</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/05_media_pool.png" alt="Media pool"><figcaption><span class="num">05</span><span>Media Pool</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/06_timeline.png" alt="Timeline"><figcaption><span class="num">06</span><span>Timeline</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/07_effects.png" alt="Effects"><figcaption><span class="num">07</span><span>Effects</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/08_transitions.png" alt="Transitions"><figcaption><span class="num">08</span><span>Transitions</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/09_typography.png" alt="Typography"><figcaption><span class="num">09</span><span>Typography</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/10_keyframes.png" alt="Keyframes"><figcaption><span class="num">10</span><span>Keyframes</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/11_color.png" alt="Color"><figcaption><span class="num">11</span><span>Color</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/12_node_graph.png" alt="Node graph"><figcaption><span class="num">12</span><span>Node Graph</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/13_node_effects.png" alt="Node effects"><figcaption><span class="num">13</span><span>Node Effects</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/14_audio_workbench.png" alt="Audio workbench"><figcaption><span class="num">14</span><span>Audio Workbench</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/15_audio_curves.png" alt="Audio curves"><figcaption><span class="num">15</span><span>Audio Curves</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/16_live2d_spine.png" alt="Live2D and Spine"><figcaption><span class="num">16</span><span>Live2D / Spine</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/17_vrm.png" alt="VRM"><figcaption><span class="num">17</span><span>VRM</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/18_mmd.png" alt="MMD"><figcaption><span class="num">18</span><span>MMD</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/19_ar_pbr.png" alt="AR PBR"><figcaption><span class="num">19</span><span>AR / PBR</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/20_creator_assist.png" alt="Creator assist"><figcaption><span class="num">20</span><span>Creator Assist</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/21_export.png" alt="Export"><figcaption><span class="num">21</span><span>Export</span></figcaption></figure>
-        <figure><img src="docs/product_catalog/slides_en/22_closing.png" alt="Closing"><figcaption><span class="num">22</span><span>Closing</span></figcaption></figure>
+      <h2>Product Walkthrough</h2>
+      <p>Scroll through the catalog. The large preview updates as each product area comes into focus.</p>
+      <div class="catalog-scroller">
+        <figure class="catalog-stage" aria-live="polite">
+          <img id="catalogPreview" src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio Surface">
+          <figcaption class="catalog-caption">
+            <span id="catalogNumber" class="num">02</span>
+            <span id="catalogTitle">Studio Surface</span>
+          </figcaption>
+        </figure>
+        <div class="catalog-steps">
+          <article class="catalog-step is-active" data-num="02" data-title="Studio Surface" data-image="docs/product_catalog/slides_en/02_studio_surface.png" data-alt="Studio Surface">
+            <div class="catalog-kicker">02</div>
+            <h3>Studio Surface</h3>
+            <p>The main editor surface: preview, timeline, media pool, workbench, and contextual controls.</p>
+          </article>
+          <article class="catalog-step" data-num="03" data-title="AI Workflow" data-image="docs/product_catalog/slides_en/03_ai_workflow.png" data-alt="AI Workflow">
+            <div class="catalog-kicker">03</div>
+            <h3>AI Workflow</h3>
+            <p>Reviewable AI planning and structured actions instead of hidden one-shot mutations.</p>
+          </article>
+          <article class="catalog-step" data-num="04" data-title="PPT Maker" data-image="docs/product_catalog/slides_en/04_ppt_maker.png" data-alt="PPT Maker">
+            <div class="catalog-kicker">04</div>
+            <h3>PPT Maker</h3>
+            <p>Timeline-native presentation pages with editable media, typography, and export paths.</p>
+          </article>
+          <article class="catalog-step" data-num="05" data-title="Media Pool" data-image="docs/product_catalog/slides_en/05_media_pool.png" data-alt="Media Pool">
+            <div class="catalog-kicker">05</div>
+            <h3>Media Pool</h3>
+            <p>Import, organize, inspect, and prepare project media before dropping it into the timeline.</p>
+          </article>
+          <article class="catalog-step" data-num="06" data-title="Timeline" data-image="docs/product_catalog/slides_en/06_timeline.png" data-alt="Timeline">
+            <div class="catalog-kicker">06</div>
+            <h3>Timeline</h3>
+            <p>Clip editing, tracks, timing, thumbnails, frame repair, and story structure in one place.</p>
+          </article>
+          <article class="catalog-step" data-num="07" data-title="Effects" data-image="docs/product_catalog/slides_en/07_effects.png" data-alt="Effects">
+            <div class="catalog-kicker">07</div>
+            <h3>Effects</h3>
+            <p>Effect presets and clip processing that stay connected to preview/export parity checks.</p>
+          </article>
+          <article class="catalog-step" data-num="08" data-title="Transitions" data-image="docs/product_catalog/slides_en/08_transitions.png" data-alt="Transitions">
+            <div class="catalog-kicker">08</div>
+            <h3>Transitions</h3>
+            <p>Timeline transitions and creator-style motion pieces for faster edit assembly.</p>
+          </article>
+          <article class="catalog-step" data-num="09" data-title="Typography" data-image="docs/product_catalog/slides_en/09_typography.png" data-alt="Typography">
+            <div class="catalog-kicker">09</div>
+            <h3>Typography</h3>
+            <p>Captions, titles, layout, and text animation as editable production elements.</p>
+          </article>
+          <article class="catalog-step" data-num="10" data-title="Keyframes" data-image="docs/product_catalog/slides_en/10_keyframes.png" data-alt="Keyframes">
+            <div class="catalog-kicker">10</div>
+            <h3>Keyframes</h3>
+            <p>Motion, timing, and parameter animation for precise creator edits.</p>
+          </article>
+          <article class="catalog-step" data-num="11" data-title="Color" data-image="docs/product_catalog/slides_en/11_color.png" data-alt="Color">
+            <div class="catalog-kicker">11</div>
+            <h3>Color</h3>
+            <p>LUTs, scopes, color metadata, and workflow checks for repeatable output.</p>
+          </article>
+          <article class="catalog-step" data-num="12" data-title="Node Graph" data-image="docs/product_catalog/slides_en/12_node_graph.png" data-alt="Node Graph">
+            <div class="catalog-kicker">12</div>
+            <h3>Node Graph</h3>
+            <p>A workbench surface for graph-based effects and compositing experiments.</p>
+          </article>
+          <article class="catalog-step" data-num="13" data-title="Node Effects" data-image="docs/product_catalog/slides_en/13_node_effects.png" data-alt="Node Effects">
+            <div class="catalog-kicker">13</div>
+            <h3>Node Effects</h3>
+            <p>Effect nodes, masks, and previewable processing chains for advanced edits.</p>
+          </article>
+          <article class="catalog-step" data-num="14" data-title="Audio Workbench" data-image="docs/product_catalog/slides_en/14_audio_workbench.png" data-alt="Audio Workbench">
+            <div class="catalog-kicker">14</div>
+            <h3>Audio Workbench</h3>
+            <p>Sound Editor, mix controls, loudness helpers, and production audio surfaces.</p>
+          </article>
+          <article class="catalog-step" data-num="15" data-title="Audio Curves" data-image="docs/product_catalog/slides_en/15_audio_curves.png" data-alt="Audio Curves">
+            <div class="catalog-kicker">15</div>
+            <h3>Audio Curves</h3>
+            <p>Curves, automation, and diagnostics for shaping sound over time.</p>
+          </article>
+          <article class="catalog-step" data-num="16" data-title="Live2D / Spine" data-image="docs/product_catalog/slides_en/16_live2d_spine.png" data-alt="Live2D and Spine">
+            <div class="catalog-kicker">16</div>
+            <h3>Live2D / Spine</h3>
+            <p>Character actors as timeline assets, with compatibility and render diagnostics.</p>
+          </article>
+          <article class="catalog-step" data-num="17" data-title="VRM" data-image="docs/product_catalog/slides_en/17_vrm.png" data-alt="VRM">
+            <div class="catalog-kicker">17</div>
+            <h3>VRM</h3>
+            <p>VTuber avatar workflows, performance-source mapping, and broadcast output foundations.</p>
+          </article>
+          <article class="catalog-step" data-num="18" data-title="MMD" data-image="docs/product_catalog/slides_en/18_mmd.png" data-alt="MMD">
+            <div class="catalog-kicker">18</div>
+            <h3>MMD</h3>
+            <p>PMX/PMD and VMD-oriented actor workflows for local character production.</p>
+          </article>
+          <article class="catalog-step" data-num="19" data-title="AR / PBR" data-image="docs/product_catalog/slides_en/19_ar_pbr.png" data-alt="AR and PBR">
+            <div class="catalog-kicker">19</div>
+            <h3>AR / PBR</h3>
+            <p>3D object compositing, material controls, depth-aware placement, and render parity targets.</p>
+          </article>
+          <article class="catalog-step" data-num="20" data-title="Creator Assist" data-image="docs/product_catalog/slides_en/20_creator_assist.png" data-alt="Creator Assist">
+            <div class="catalog-kicker">20</div>
+            <h3>Creator Assist</h3>
+            <p>Short-form planning, caption beats, publish variants, and safe apply workflows.</p>
+          </article>
+          <article class="catalog-step" data-num="21" data-title="Export" data-image="docs/product_catalog/slides_en/21_export.png" data-alt="Export">
+            <div class="catalog-kicker">21</div>
+            <h3>Export</h3>
+            <p>Render queue, delivery presets, diagnostics, and export readiness checks.</p>
+          </article>
+          <article class="catalog-step" data-num="22" data-title="Closing" data-image="docs/product_catalog/slides_en/22_closing.png" data-alt="Closing">
+            <div class="catalog-kicker">22</div>
+            <h3>Closing</h3>
+            <p>The public catalog wraps the current release-safe product story.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -222,5 +413,38 @@
       <code>75EE94D571F23755D77AD5FC5107A4D583BBE2B4CD04C58C3BBA64C48ABA86BF</code>
     </div>
   </footer>
+  <script>
+    const preview = document.getElementById("catalogPreview");
+    const previewNumber = document.getElementById("catalogNumber");
+    const previewTitle = document.getElementById("catalogTitle");
+    const steps = Array.from(document.querySelectorAll(".catalog-step"));
+
+    function setActiveStep(step) {
+      if (!step || step.classList.contains("is-active")) return;
+      steps.forEach((item) => item.classList.toggle("is-active", item === step));
+      preview.style.opacity = "0.18";
+      window.setTimeout(() => {
+        preview.src = step.dataset.image;
+        preview.alt = step.dataset.alt;
+        previewNumber.textContent = step.dataset.num;
+        previewTitle.textContent = step.dataset.title;
+        preview.style.opacity = "1";
+      }, 90);
+    }
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveStep(visible.target);
+      }, {
+        root: null,
+        threshold: [0.35, 0.55, 0.75],
+        rootMargin: "-18% 0px -28% 0px"
+      });
+      steps.forEach((step) => observer.observe(step));
+    }
+  </script>
 </body>
 </html>

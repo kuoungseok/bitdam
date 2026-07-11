@@ -12,22 +12,71 @@ catalog screenshots, and installer releases.
 
 ## Product Catalog Preview
 
-The catalog screenshots below are shown directly in the repository root so the
-public page can be scanned without opening each image link one by one.
+The catalog screenshots below are shown directly in the repository root, one
+large image at a time, so the page can be scanned without opening image links.
 
-|  |  |
-|---|---|
-| <img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio Surface" width="460"><br><sub>02 Studio Surface</sub> | <img src="docs/product_catalog/slides_en/03_ai_workflow.png" alt="AI Workflow" width="460"><br><sub>03 AI Workflow</sub> |
-| <img src="docs/product_catalog/slides_en/04_ppt_maker.png" alt="PPT Maker" width="460"><br><sub>04 PPT Maker</sub> | <img src="docs/product_catalog/slides_en/05_media_pool.png" alt="Media Pool" width="460"><br><sub>05 Media Pool</sub> |
-| <img src="docs/product_catalog/slides_en/06_timeline.png" alt="Timeline" width="460"><br><sub>06 Timeline</sub> | <img src="docs/product_catalog/slides_en/07_effects.png" alt="Effects" width="460"><br><sub>07 Effects</sub> |
-| <img src="docs/product_catalog/slides_en/08_transitions.png" alt="Transitions" width="460"><br><sub>08 Transitions</sub> | <img src="docs/product_catalog/slides_en/09_typography.png" alt="Typography" width="460"><br><sub>09 Typography</sub> |
-| <img src="docs/product_catalog/slides_en/10_keyframes.png" alt="Keyframes" width="460"><br><sub>10 Keyframes</sub> | <img src="docs/product_catalog/slides_en/11_color.png" alt="Color" width="460"><br><sub>11 Color</sub> |
-| <img src="docs/product_catalog/slides_en/12_node_graph.png" alt="Node Graph" width="460"><br><sub>12 Node Graph</sub> | <img src="docs/product_catalog/slides_en/13_node_effects.png" alt="Node Effects" width="460"><br><sub>13 Node Effects</sub> |
-| <img src="docs/product_catalog/slides_en/14_audio_workbench.png" alt="Audio Workbench" width="460"><br><sub>14 Audio Workbench</sub> | <img src="docs/product_catalog/slides_en/15_audio_curves.png" alt="Audio Curves" width="460"><br><sub>15 Audio Curves</sub> |
-| <img src="docs/product_catalog/slides_en/16_live2d_spine.png" alt="Live2D and Spine" width="460"><br><sub>16 Live2D / Spine</sub> | <img src="docs/product_catalog/slides_en/17_vrm.png" alt="VRM" width="460"><br><sub>17 VRM</sub> |
-| <img src="docs/product_catalog/slides_en/18_mmd.png" alt="MMD" width="460"><br><sub>18 MMD</sub> | <img src="docs/product_catalog/slides_en/19_ar_pbr.png" alt="AR and PBR" width="460"><br><sub>19 AR / PBR</sub> |
-| <img src="docs/product_catalog/slides_en/20_creator_assist.png" alt="Creator Assist" width="460"><br><sub>20 Creator Assist</sub> | <img src="docs/product_catalog/slides_en/21_export.png" alt="Export" width="460"><br><sub>21 Export</sub> |
-| <img src="docs/product_catalog/slides_en/22_closing.png" alt="Closing" width="460"><br><sub>22 Closing</sub> |  |
+### 02 Studio Surface
+<img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio Surface" width="980">
+
+### 03 AI Workflow
+<img src="docs/product_catalog/slides_en/03_ai_workflow.png" alt="AI Workflow" width="980">
+
+### 04 PPT Maker
+<img src="docs/product_catalog/slides_en/04_ppt_maker.png" alt="PPT Maker" width="980">
+
+### 05 Media Pool
+<img src="docs/product_catalog/slides_en/05_media_pool.png" alt="Media Pool" width="980">
+
+### 06 Timeline
+<img src="docs/product_catalog/slides_en/06_timeline.png" alt="Timeline" width="980">
+
+### 07 Effects
+<img src="docs/product_catalog/slides_en/07_effects.png" alt="Effects" width="980">
+
+### 08 Transitions
+<img src="docs/product_catalog/slides_en/08_transitions.png" alt="Transitions" width="980">
+
+### 09 Typography
+<img src="docs/product_catalog/slides_en/09_typography.png" alt="Typography" width="980">
+
+### 10 Keyframes
+<img src="docs/product_catalog/slides_en/10_keyframes.png" alt="Keyframes" width="980">
+
+### 11 Color
+<img src="docs/product_catalog/slides_en/11_color.png" alt="Color" width="980">
+
+### 12 Node Graph
+<img src="docs/product_catalog/slides_en/12_node_graph.png" alt="Node Graph" width="980">
+
+### 13 Node Effects
+<img src="docs/product_catalog/slides_en/13_node_effects.png" alt="Node Effects" width="980">
+
+### 14 Audio Workbench
+<img src="docs/product_catalog/slides_en/14_audio_workbench.png" alt="Audio Workbench" width="980">
+
+### 15 Audio Curves
+<img src="docs/product_catalog/slides_en/15_audio_curves.png" alt="Audio Curves" width="980">
+
+### 16 Live2D / Spine
+<img src="docs/product_catalog/slides_en/16_live2d_spine.png" alt="Live2D and Spine" width="980">
+
+### 17 VRM
+<img src="docs/product_catalog/slides_en/17_vrm.png" alt="VRM" width="980">
+
+### 18 MMD
+<img src="docs/product_catalog/slides_en/18_mmd.png" alt="MMD" width="980">
+
+### 19 AR / PBR
+<img src="docs/product_catalog/slides_en/19_ar_pbr.png" alt="AR and PBR" width="980">
+
+### 20 Creator Assist
+<img src="docs/product_catalog/slides_en/20_creator_assist.png" alt="Creator Assist" width="980">
+
+### 21 Export
+<img src="docs/product_catalog/slides_en/21_export.png" alt="Export" width="980">
+
+### 22 Closing
+<img src="docs/product_catalog/slides_en/22_closing.png" alt="Closing" width="980">
 
 ## Current Public Build
 
