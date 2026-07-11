@@ -81,8 +81,6 @@
       margin: 0 auto;
     }
     header {
-      --hero-bg: url("docs/screenshots/typography-editor.png");
-      --hero-detail: url("docs/product_catalog/slides_en/16_live2d_spine.png");
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -99,12 +97,13 @@
     header::before {
       content: "";
       position: absolute;
-      inset: -72px;
+      inset: 0;
       z-index: 0;
-      background: var(--hero-bg) center / cover no-repeat;
-      opacity: 0.42;
-      filter: blur(18px) saturate(0.92) brightness(0.9) contrast(1.04);
-      transform: scale(1.08);
+      background:
+        linear-gradient(90deg, rgba(8, 10, 14, 0.98) 0%, rgba(8, 10, 14, 0.8) 38%, rgba(8, 10, 14, 0.24) 68%, rgba(8, 10, 14, 0.38) 100%),
+        linear-gradient(180deg, rgba(8, 10, 14, 0.18) 0%, rgba(8, 10, 14, 0) 44%, rgba(8, 10, 14, 0.32) 100%),
+        url("docs/screenshots/hero-current-editor-action-capture.png") right center / min(78vw, 1380px) auto no-repeat;
+      filter: saturate(0.96) brightness(1.06) contrast(1.02);
       pointer-events: none;
     }
     header::after {
