@@ -1,28 +1,34 @@
-# TigerCapture Public Product Spec
+# Tiger Studio Public Product Spec
 
-This document is a public, release-safe summary of the current TigerCapture
-product direction. It avoids private implementation notes and focuses on the
-features shown in the product catalog screenshots.
+This document is a public, release-safe summary of the current Tiger Studio
+product direction. Tiger Studio was formerly called TigerCapture; the public
+repository still uses the `tigercapture` name for distribution continuity.
+This page focuses on release-safe product behavior shown in the product catalog
+screenshots.
 
 ## Product Position
 
-TigerCapture is a local-first creator studio that combines screen capture,
-timeline editing, presentation creation, 3D/AR compositing, character actors,
-audio work, and AI-operable review automation.
+Tiger Studio is a subculture-ready video editor for screen, shorts, and
+character creators. It combines screen-recording polish, timeline editing,
+presentation pages, 3D/AR compositing, Live2D/Spine/MMD/VRM character actors,
+audio work, and reviewable AI-assisted workflows.
 
-The product is designed for creators who need to capture work, explain it,
-edit it, add visual evidence, and publish a polished video or presentation
-without moving through several disconnected tools.
+The product is designed for creators who need to capture or import footage,
+edit it, add characters or voice/music/presentation material, and publish a
+polished video without moving through several disconnected tools.
+
+Korean: 화면녹화, 쇼츠, 캐릭터 영상, 음성, 음악, 발표 페이지를 하나의 로컬 우선
+영상편집 흐름으로 묶는 것이 핵심입니다.
 
 ## Core Areas
 
-### Studio Surface
+### Timeline Video Editor
 
 - Main editor with media pool, preview, timeline, inspector/workbench panels,
   transport controls, and status surfaces.
-- Dense production UI intended for repeated editing work rather than a
-  marketing-first landing screen.
-- Review automation can capture real UI states for product evidence.
+- Dense production UI intended for repeated editing work rather than a simple
+  capture utility.
+- Public screenshots use real editor states for product evidence.
 
 ### Timeline Editing
 
@@ -32,10 +38,10 @@ without moving through several disconnected tools.
   color grading, and track state.
 - Drag-and-drop workflows are preferred for media pool to timeline operations.
 
-### PPT Maker
+### PPT / Presentation Pages
 
 - Independent presentation editor prototype designed to integrate with the
-  existing TigerCapture media pool and timeline ecosystem.
+  existing Tiger Studio media pool and timeline ecosystem.
 - Video, 3D, and typography assets can become slide actors through
   drag-and-drop workflows.
 - Timeline-style thinking can be used to create frame/page-based presentation
@@ -74,12 +80,12 @@ without moving through several disconnected tools.
   and material concerns.
 - Public catalog slides include Live2D/Spine, VRM, and MMD evidence pages.
 
-### AI-Operable Actions
+### AI Actions and Automation
 
-- TigerCapture exposes structured Python Action / MCP-style surfaces so local
-  AI or review automation can inspect project state and operate features.
-- Review automation must use real TigerCapture UI screenshots and real rendered
-  proof outputs for product evidence.
+- Tiger Studio exposes structured action surfaces so local AI and review
+  automation can inspect project state and operate editor features safely.
+- Review/catalog evidence must use real Tiger Studio UI screenshots and real
+  rendered proof outputs.
 
 ## Public Catalog Image Order
 
