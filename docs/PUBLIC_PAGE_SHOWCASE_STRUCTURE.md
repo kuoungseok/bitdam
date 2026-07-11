@@ -146,7 +146,7 @@ Copy:
 Live2D, Spine, MMD, and VRM actor tracks for edited videos, shorts, and avatar-driven scenes.
 
 Image:
-`docs/product_catalog/slides_en/16_live2d_spine.png`
+`docs/product_catalog/slides_en/17_live2d_spine.png`
 
 Tile 03:
 Shorts and social clips
@@ -155,7 +155,7 @@ Copy:
 Captions, vertical templates, hooks, publish packages, and render queue handoff for creator workflows.
 
 Image:
-`docs/product_catalog/slides_en/20_creator_assist.png`
+`docs/product_catalog/slides_en/21_creator_assist.png`
 
 Tile 04:
 Voice, music, and presentation videos
@@ -164,7 +164,7 @@ Copy:
 Voice Lab direction, Music Lab, subtitles, and PPT-style pages for explainer and character content.
 
 Image:
-`docs/product_catalog/slides_en/14_audio_workbench.png`
+`docs/product_catalog/slides_en/14_music_lab.png`
 
 Design rules:
 
@@ -262,6 +262,7 @@ Scene list:
 
 | No. | Title | Image | Public Message |
 | --- | --- | --- | --- |
+| 01 | Multi-Environment Editing Studio | `docs/product_catalog/slides_en/01_studio_overview.png` | The same project can spread across preview, timeline, actors, 3D, nodes, and audio displays. |
 | 02 | Studio Surface | `docs/product_catalog/slides_en/02_studio_surface.png` | The editor surface: preview, timeline, media pool, workbench, and contextual controls. |
 | 03 | AI Workflow | `docs/product_catalog/slides_en/03_ai_workflow.png` | Reviewable AI planning and structured actions instead of hidden one-shot mutations. |
 | 04 | PPT Maker | `docs/product_catalog/slides_en/04_ppt_maker.png` | Timeline-native presentation pages with editable media, typography, and export paths. |
@@ -274,15 +275,16 @@ Scene list:
 | 11 | Color | `docs/product_catalog/slides_en/11_color.png` | LUTs, scopes, color metadata, and workflow checks for repeatable output. |
 | 12 | Node Graph | `docs/product_catalog/slides_en/12_node_graph.png` | A workbench surface for graph-based effects and compositing experiments. |
 | 13 | Node Effects | `docs/product_catalog/slides_en/13_node_effects.png` | Effect nodes, masks, and previewable processing chains for advanced edits. |
-| 14 | Audio Workbench | `docs/product_catalog/slides_en/14_audio_workbench.png` | Sound Editor, mix controls, loudness helpers, and production audio surfaces. |
-| 15 | Audio Curves | `docs/product_catalog/slides_en/15_audio_curves.png` | Curves, automation, and diagnostics for shaping sound over time. |
-| 16 | Live2D / Spine | `docs/product_catalog/slides_en/16_live2d_spine.png` | Character actors as timeline assets, with compatibility and render diagnostics. |
-| 17 | VRM | `docs/product_catalog/slides_en/17_vrm.png` | VTuber avatar workflows, performance-source mapping, and broadcast output foundations. |
-| 18 | MMD | `docs/product_catalog/slides_en/18_mmd.png` | PMX/PMD and VMD-oriented actor workflows for local character production. |
-| 19 | AR / PBR | `docs/product_catalog/slides_en/19_ar_pbr.png` | 3D object compositing, material controls, depth-aware placement, and render parity targets. |
-| 20 | Creator Assist | `docs/product_catalog/slides_en/20_creator_assist.png` | Short-form planning, caption beats, publish variants, and safe apply workflows. |
-| 21 | Export | `docs/product_catalog/slides_en/21_export.png` | Render queue, delivery presets, diagnostics, and export readiness checks. |
-| 22 | Closing | `docs/product_catalog/slides_en/22_closing.png` | The public catalog wraps the current release-safe product story. |
+| 14 | Music Lab | `docs/product_catalog/slides_en/14_music_lab.png` | Prompt composition, sections, notes, and timeline render direction for music-backed videos. |
+| 15 | Audio Workbench | `docs/product_catalog/slides_en/15_audio_workbench.png` | Sound Editor, mix controls, loudness helpers, and production audio surfaces. |
+| 16 | Audio Curves | `docs/product_catalog/slides_en/16_audio_curves.png` | Curves, automation, and diagnostics for shaping sound over time. |
+| 17 | Live2D / Spine | `docs/product_catalog/slides_en/17_live2d_spine.png` | Character actors as timeline assets, with compatibility and render diagnostics. |
+| 18 | VRM | `docs/product_catalog/slides_en/18_vrm.png` | VTuber avatar workflows, performance-source mapping, and broadcast output foundations. |
+| 19 | MMD | `docs/product_catalog/slides_en/19_mmd.png` | PMX/PMD and VMD-oriented actor workflows for local character production. |
+| 20 | AR / PBR | `docs/product_catalog/slides_en/20_ar_pbr.png` | 3D object compositing, material controls, depth-aware placement, and render parity targets. |
+| 21 | Creator Assist | `docs/product_catalog/slides_en/21_creator_assist.png` | Short-form planning, caption beats, publish variants, and safe apply workflows. |
+| 22 | Export | `docs/product_catalog/slides_en/22_export.png` | Render queue, delivery presets, diagnostics, and export readiness checks. |
+| 23 | Specification Index | `docs/product_catalog/slides_en/23_closing.png` | The catalog closes with a compact release-safe map of the current product surface. |
 
 Design rules:
 

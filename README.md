@@ -24,6 +24,9 @@ Formerly TigerCapture. Local-first on Windows.
 The screenshots below are shown one large image at a time so the repository
 front page reads like a product overview, not a folder of image links.
 
+### Multi-Environment Editing Studio
+<img src="docs/product_catalog/slides_en/01_studio_overview.png" alt="Multi-environment editing studio" width="980">
+
 ### Timeline Video Editor
 <img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Tiger Studio editing surface" width="980">
 
@@ -52,21 +55,27 @@ front page reads like a product overview, not a folder of image links.
 <img src="docs/product_catalog/slides_en/12_node_graph.png" alt="Node Graph" width="980">
 <img src="docs/product_catalog/slides_en/13_node_effects.png" alt="Node Effects" width="980">
 
+### Music Lab
+<img src="docs/product_catalog/slides_en/14_music_lab.png" alt="Music Lab" width="980">
+
 ### Audio, Voice, and Music Direction
-<img src="docs/product_catalog/slides_en/14_audio_workbench.png" alt="Audio Workbench" width="980">
-<img src="docs/product_catalog/slides_en/15_audio_curves.png" alt="Audio Curves" width="980">
+<img src="docs/product_catalog/slides_en/15_audio_workbench.png" alt="Audio Workbench" width="980">
+<img src="docs/product_catalog/slides_en/16_audio_curves.png" alt="Audio Curves" width="980">
 
 ### Character Actors
-<img src="docs/product_catalog/slides_en/16_live2d_spine.png" alt="Live2D and Spine" width="980">
-<img src="docs/product_catalog/slides_en/17_vrm.png" alt="VRM" width="980">
-<img src="docs/product_catalog/slides_en/18_mmd.png" alt="MMD" width="980">
+<img src="docs/product_catalog/slides_en/17_live2d_spine.png" alt="Live2D and Spine" width="980">
+<img src="docs/product_catalog/slides_en/18_vrm.png" alt="VRM" width="980">
+<img src="docs/product_catalog/slides_en/19_mmd.png" alt="MMD" width="980">
 
 ### AR / PBR / 3D Compositing
-<img src="docs/product_catalog/slides_en/19_ar_pbr.png" alt="AR and PBR" width="980">
+<img src="docs/product_catalog/slides_en/20_ar_pbr.png" alt="AR and PBR" width="980">
 
 ### Creator Assist and Export
-<img src="docs/product_catalog/slides_en/20_creator_assist.png" alt="Creator Assist" width="980">
-<img src="docs/product_catalog/slides_en/21_export.png" alt="Export" width="980">
+<img src="docs/product_catalog/slides_en/21_creator_assist.png" alt="Creator Assist" width="980">
+<img src="docs/product_catalog/slides_en/22_export.png" alt="Export" width="980">
+
+### Specification Index
+<img src="docs/product_catalog/slides_en/23_closing.png" alt="Specification Index" width="980">
 
 ## Positioning
 
