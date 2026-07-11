@@ -207,10 +207,44 @@
     }
     .status-row strong { color: var(--green); }
     .status-row span { color: var(--muted); }
+    .catalog-section {
+      --catalog-bg: url("docs/product_catalog/slides_en/02_studio_surface.png");
+      position: relative;
+      isolation: isolate;
+      clip-path: inset(0);
+      background:
+        linear-gradient(90deg, rgba(11, 13, 18, 0.94), rgba(11, 13, 18, 0.78) 58%, rgba(11, 13, 18, 0.94)),
+        #0b0d12;
+    }
+    .catalog-section::before {
+      content: "";
+      position: absolute;
+      inset: -42px;
+      z-index: -2;
+      background-image: var(--catalog-bg);
+      background-size: cover;
+      background-position: center;
+      filter: blur(34px) saturate(0.78);
+      opacity: 0.24;
+      transform: scale(1.04);
+    }
+    .catalog-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 24% 18%, rgba(103, 216, 255, 0.16), transparent 34%),
+        linear-gradient(180deg, rgba(11, 13, 18, 0.3), rgba(11, 13, 18, 0.86));
+      pointer-events: none;
+    }
+    .catalog-section .wrap {
+      width: min(1600px, calc(100% - 56px));
+    }
     .catalog-scroller {
       display: grid;
-      grid-template-columns: minmax(0, 1.48fr) minmax(280px, 0.82fr);
-      gap: 28px;
+      grid-template-columns: minmax(0, 2.6fr) minmax(190px, 0.48fr);
+      gap: 22px;
       align-items: start;
       margin-top: 24px;
       padding-bottom: 42px;
@@ -228,8 +262,9 @@
     .catalog-stage img {
       display: block;
       width: 100%;
-      height: auto;
-      min-height: 260px;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 420px;
       object-fit: contain;
       background: #080b10;
       transition: opacity 180ms ease;
@@ -251,24 +286,26 @@
     }
     .catalog-steps {
       display: grid;
-      gap: 12px;
+      gap: 8px;
     }
     .catalog-step {
-      min-height: 42vh;
+      min-height: 118px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 18px;
-      background: var(--panel);
+      padding: 13px;
+      background: rgba(20, 25, 34, 0.74);
       opacity: 0.64;
-      transition: border-color 180ms ease, opacity 180ms ease, background 180ms ease;
+      backdrop-filter: blur(10px);
+      transition: border-color 180ms ease, opacity 180ms ease, background 180ms ease, transform 180ms ease;
     }
     .catalog-step.is-active {
       border-color: #3f8fb0;
-      background: #172234;
+      background: rgba(23, 34, 52, 0.92);
       opacity: 1;
+      transform: translateX(-4px);
     }
     .catalog-kicker {
       color: var(--green);
@@ -278,12 +315,12 @@
     }
     .catalog-step h3 {
       margin: 0 0 8px;
-      font-size: clamp(21px, 2.6vw, 32px);
+      font-size: clamp(18px, 1.45vw, 24px);
     }
     .catalog-step p {
       margin: 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 13px;
     }
     code {
       color: #d7e4ff;
@@ -467,7 +504,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="catalog-section" id="product-walkthrough">
       <div class="wrap">
         <h2>Product Walkthrough</h2>
         <p class="section-lead">Scroll through the catalog. The large preview updates as each product area comes into focus.</p>
@@ -518,11 +555,13 @@
     const preview = document.getElementById("catalogPreview");
     const previewNumber = document.getElementById("catalogNumber");
     const previewTitle = document.getElementById("catalogTitle");
+    const catalogSection = document.getElementById("product-walkthrough");
     const steps = Array.from(document.querySelectorAll(".catalog-step"));
 
     function setActiveStep(step) {
       if (!step || step.classList.contains("is-active")) return;
       steps.forEach((item) => item.classList.toggle("is-active", item === step));
+      catalogSection.style.setProperty("--catalog-bg", `url("${step.dataset.image}")`);
       preview.style.opacity = "0.18";
       window.setTimeout(() => {
         preview.src = step.dataset.image;
