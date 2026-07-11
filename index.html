@@ -97,13 +97,14 @@
     header::before {
       content: "";
       position: absolute;
-      inset: 0;
+      inset: -28px;
       z-index: 0;
       background:
         linear-gradient(90deg, rgba(8, 10, 14, 0.98) 0%, rgba(8, 10, 14, 0.8) 38%, rgba(8, 10, 14, 0.24) 68%, rgba(8, 10, 14, 0.38) 100%),
         linear-gradient(180deg, rgba(8, 10, 14, 0.18) 0%, rgba(8, 10, 14, 0) 44%, rgba(8, 10, 14, 0.32) 100%),
         url("docs/screenshots/hero-current-editor-action-capture.png") right center / min(78vw, 1380px) auto no-repeat;
-      filter: saturate(0.96) brightness(1.06) contrast(1.02);
+      filter: blur(10px) saturate(0.96) brightness(1.08) contrast(1.02);
+      transform: scale(1.025);
       pointer-events: none;
     }
     header::after {
