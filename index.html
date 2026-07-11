@@ -81,8 +81,8 @@
       margin: 0 auto;
     }
     header {
-      --hero-bg: url("docs/screenshots/typography-editor.png");
-      --hero-detail: none;
+      --hero-bg: url("docs/product_catalog/slides_en/06_timeline.png");
+      --hero-detail: url("docs/product_catalog/slides_en/16_live2d_spine.png");
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -91,8 +91,8 @@
       border-bottom: 1px solid var(--line);
       overflow: hidden;
       background:
-        linear-gradient(90deg, rgba(8, 10, 14, 0.94) 0%, rgba(8, 10, 14, 0.68) 42%, rgba(8, 10, 14, 0.16) 72%, rgba(8, 10, 14, 0.26) 100%),
-        linear-gradient(180deg, rgba(8, 10, 14, 0.66) 0%, rgba(8, 10, 14, 0.05) 46%, rgba(8, 10, 14, 0.72) 100%),
+        linear-gradient(90deg, rgba(8, 10, 14, 0.99) 0%, rgba(8, 10, 14, 0.9) 46%, rgba(8, 10, 14, 0.7) 74%, rgba(8, 10, 14, 0.9) 100%),
+        linear-gradient(180deg, rgba(8, 10, 14, 0.86) 0%, rgba(8, 10, 14, 0.3) 42%, rgba(8, 10, 14, 0.99) 100%),
         repeating-linear-gradient(0deg, rgba(242, 245, 251, 0.018) 0 1px, transparent 1px 4px),
         #080a0f;
     }
@@ -102,13 +102,21 @@
       inset: -72px;
       z-index: 0;
       background: var(--hero-bg) center / cover no-repeat;
-      opacity: 0.58;
-      filter: blur(12px) saturate(0.98) brightness(1.02) contrast(1.02);
+      opacity: 0.28;
+      filter: blur(30px) saturate(0.78) brightness(0.62) contrast(1.12);
       transform: scale(1.08);
       pointer-events: none;
     }
     header::after {
-      content: none;
+      content: "";
+      position: absolute;
+      inset: -24px;
+      z-index: 1;
+      background: var(--hero-detail) right center / 64vw auto no-repeat;
+      opacity: 0.11;
+      filter: blur(1px) saturate(0.62) brightness(0.52) contrast(1.05);
+      transform: scale(1.02);
+      pointer-events: none;
     }
     .hero-grid {
       position: relative;
@@ -134,27 +142,6 @@
       letter-spacing: 0;
       text-transform: uppercase;
     }
-    .hero-title-logo {
-      display: none;
-      width: min(640px, 88vw);
-      max-height: 40vh;
-      height: auto;
-      margin: 4px 0 22px;
-      object-fit: contain;
-      object-position: left center;
-      filter: drop-shadow(0 32px 80px rgba(0, 0, 0, 0.48));
-    }
-    .hero-logo-mode .hero-title-logo {
-      display: block;
-    }
-    .hero-logo-mode .hero-title-text {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-    }
     .subtitle {
       margin: 24px 0 0;
       max-width: 860px;
@@ -170,12 +157,6 @@
       margin-top: 12px;
       color: var(--muted);
       font-size: 17px;
-    }
-    .creator-credit {
-      margin: 6px 0 0;
-      color: rgba(242, 245, 251, 0.74);
-      font-size: 14px;
-      font-weight: 800;
     }
     .ko {
       max-width: 850px;
@@ -584,11 +565,6 @@
         line-height: 0.96;
         overflow-wrap: anywhere;
       }
-      .hero-title-logo {
-        width: min(92vw, 420px);
-        max-height: 33vh;
-        margin-bottom: 18px;
-      }
       .subtitle {
         width: 100%;
         max-width: 100%;
@@ -687,20 +663,17 @@
       <a href="https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2">Download</a>
     </div>
   </nav>
-  <header id="top" class="hero-logo-mode">
+  <header id="top">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Subculture-ready video editor</div>
-        <!-- Rollback: remove `hero-logo-mode` from <header> to use this text title again. -->
-        <img class="hero-title-logo" src="docs/branding/tiger_studio_hero_lockup_alpha.png" alt="Tiger Studio">
-        <h1 class="hero-title-text">Tiger Studio</h1>
+        <h1>Tiger Studio</h1>
         <p class="subtitle">
           <span>Subculture-ready video editor</span>
           <span>for screen, shorts,</span>
           <span>and character creators.</span>
         </p>
         <p class="formerly">Formerly TigerCapture. Local-first on Windows.</p>
-        <p class="creator-credit">Made by artmouse (KyoungSeok Ko).</p>
         <p class="ko">화면녹화, 쇼츠 편집, Live2D/Spine/MMD/VRM 캐릭터, 음성, 음악, 발표 페이지를 한 프로젝트에서 다루는 로컬 우선 영상편집 스튜디오입니다.</p>
         <div class="actions">
           <a class="button primary" href="https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2">Download installer</a>
@@ -843,7 +816,6 @@
   <footer>
     <div class="wrap">
       Public distribution page for Tiger Studio, formerly TigerCapture.
-      Made by artmouse (KyoungSeok Ko).
       Installer SHA-256:
       <code>75EE94D571F23755D77AD5FC5107A4D583BBE2B4CD04C58C3BBA64C48ABA86BF</code>
     </div>
