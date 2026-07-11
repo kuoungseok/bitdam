@@ -39,7 +39,7 @@ Use a game-studio style product showcase:
 - Section-by-section scroll scenes.
 - One dominant visual per section.
 - Small right-side step list or scene index.
-- Current scroll scene updates both the large image and the blurred background.
+- Current scroll scene updates both the large image and the layered cinematic backdrop.
 - Feature cards should be secondary; the first impression must be visual.
 
 Avoid:
@@ -250,7 +250,12 @@ Layout:
 - Left side: very large sticky image preview.
 - Right side: small vertical scene index.
 - Current scene changes the preview image.
-- Current scene also changes the section background image.
+- Current scene also changes the section backdrop image.
+- The backdrop should be layered, not a single flat blur:
+  - a deep, oversized color-wash layer for atmosphere,
+  - a shallow, low-opacity detail layer so the current slide shape remains readable,
+  - a dark matte/gradient layer to protect foreground text,
+  - a subtle grain or scanline texture to avoid a cheap glass-panel look.
 - The right-side item should be compact. It is a navigator, not the main content.
 
 Scene list:
@@ -283,7 +288,7 @@ Design rules:
 
 - The preview image should be at least four times wider than the scene index on desktop.
 - The scene index should feel like a control rail.
-- The current scene background should be blurred and darkened behind the content.
+- The current scene backdrop should feel cinematic: blurred, darkened, and still lightly recognizable behind the content.
 - On mobile, collapse to single-column: preview first, then compact scene blocks.
 
 ## 8. Footer
