@@ -32,19 +32,92 @@
       color: var(--text);
       line-height: 1.55;
     }
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px clamp(18px, 4vw, 54px);
+      background: linear-gradient(180deg, rgba(7, 9, 14, 0.82), rgba(7, 9, 14, 0));
+      pointer-events: none;
+    }
+    .brand-mark,
+    .nav-links {
+      pointer-events: auto;
+    }
+    .brand-mark {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      text-decoration: none;
+    }
+    .brand-mark span {
+      color: var(--green);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      color: rgba(242, 245, 251, 0.78);
+      text-decoration: none;
+    }
+    .nav-links a:hover {
+      color: var(--text);
+    }
     .wrap {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
     header {
-      min-height: 92vh;
+      position: relative;
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 54px 0 42px;
+      padding: 96px 0 58px;
       border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(8, 10, 14, 0.94) 0%, rgba(8, 10, 14, 0.74) 42%, rgba(8, 10, 14, 0.34) 72%, rgba(8, 10, 14, 0.74) 100%),
+        url("docs/product_catalog/slides_en/06_timeline.png") center / cover no-repeat;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(141, 255, 176, 0.15), transparent 28%),
+        radial-gradient(circle at 78% 28%, rgba(103, 216, 255, 0.22), transparent 34%),
+        url("docs/product_catalog/slides_en/16_live2d_spine.png") right center / 66vw auto no-repeat;
+      opacity: 0.34;
+      filter: saturate(0.9);
+      pointer-events: none;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 34vh;
+      background: linear-gradient(180deg, rgba(11, 13, 18, 0), rgba(11, 13, 18, 0.96));
+      pointer-events: none;
     }
     .hero-grid {
-      max-width: 940px;
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
     }
     .eyebrow {
       display: inline-flex;
@@ -59,9 +132,11 @@
     }
     h1 {
       margin: 0;
-      font-size: clamp(58px, 10vw, 126px);
-      line-height: 0.88;
+      max-width: 920px;
+      font-size: clamp(66px, 11.5vw, 160px);
+      line-height: 0.84;
       letter-spacing: 0;
+      text-transform: uppercase;
     }
     .subtitle {
       margin: 24px 0 0;
@@ -108,6 +183,43 @@
     .button.primary {
       border-color: #2d93b9;
       background: #0d6c8d;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 840px;
+    }
+    .hero-meta span {
+      border: 1px solid rgba(215, 222, 234, 0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(9, 13, 20, 0.46);
+      color: rgba(242, 245, 251, 0.78);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .scroll-cue {
+      position: absolute;
+      left: clamp(18px, 4vw, 54px);
+      bottom: 30px;
+      z-index: 2;
+      color: rgba(242, 245, 251, 0.56);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .scroll-cue::before {
+      content: "";
+      display: inline-block;
+      width: 54px;
+      height: 1px;
+      margin-right: 12px;
+      vertical-align: middle;
+      background: rgba(242, 245, 251, 0.36);
     }
     .hero-panel {
       border: 1px solid var(--line);
@@ -174,6 +286,60 @@
       color: var(--muted);
       font-size: 15px;
     }
+    .make-section {
+      padding: 78px 0;
+      background: #0b0d12;
+    }
+    .make-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .make-card {
+      --tile-bg: url("docs/product_catalog/slides_en/02_studio_surface.png");
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border: 1px solid rgba(215, 222, 234, 0.14);
+      border-radius: 8px;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(9, 12, 18, 0.06), rgba(9, 12, 18, 0.9)),
+        var(--tile-bg) center / cover;
+    }
+    .make-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(103, 216, 255, 0.12), rgba(255, 143, 112, 0.08));
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+    .make-card:hover::before {
+      opacity: 1;
+    }
+    .make-copy {
+      position: relative;
+      z-index: 1;
+    }
+    .make-copy span {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .make-copy h3 {
+      margin: 8px 0 8px;
+      font-size: clamp(22px, 2.4vw, 34px);
+      line-height: 1;
+    }
+    .make-copy p {
+      margin: 0;
+      color: rgba(242, 245, 251, 0.76);
+      font-size: 14px;
+    }
     .positioning {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
@@ -212,6 +378,8 @@
       position: relative;
       isolation: isolate;
       clip-path: inset(0);
+      min-height: 100vh;
+      padding: 88px 0;
       background:
         linear-gradient(90deg, rgba(11, 13, 18, 0.94), rgba(11, 13, 18, 0.78) 58%, rgba(11, 13, 18, 0.94)),
         #0b0d12;
@@ -241,9 +409,17 @@
     .catalog-section .wrap {
       width: min(1600px, calc(100% - 56px));
     }
+    .catalog-section h2 {
+      max-width: 980px;
+      font-size: clamp(42px, 6vw, 94px);
+      text-transform: uppercase;
+    }
+    .catalog-section .section-lead {
+      max-width: 760px;
+    }
     .catalog-scroller {
       display: grid;
-      grid-template-columns: minmax(0, 2.6fr) minmax(190px, 0.48fr);
+      grid-template-columns: minmax(0, 3fr) minmax(190px, 0.46fr);
       gap: 22px;
       align-items: start;
       margin-top: 24px;
@@ -264,7 +440,7 @@
       width: 100%;
       height: 100%;
       aspect-ratio: 16 / 9;
-      min-height: 420px;
+      min-height: min(72vh, 760px);
       object-fit: contain;
       background: #080b10;
       transition: opacity 180ms ease;
@@ -332,13 +508,34 @@
       padding: 28px 0 46px;
       color: var(--muted);
     }
+    @media (max-width: 1100px) {
+      .make-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .make-card {
+        min-height: 420px;
+      }
+    }
     @media (max-width: 820px) {
       body {
         overflow-x: hidden;
       }
+      .top-nav {
+        position: absolute;
+        padding: 14px 11px;
+      }
+      .nav-links {
+        gap: 10px;
+        font-size: 11px;
+      }
+      .nav-links a:nth-child(1),
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
       header {
-        min-height: auto;
-        padding: 36px 0 32px;
+        min-height: 100vh;
+        padding: 92px 0 54px;
+        background-position: 62% center;
       }
       .wrap {
         width: calc(100% - 22px);
@@ -365,6 +562,16 @@
       .subtitle span {
         display: block;
       }
+      .hero-meta {
+        gap: 8px;
+      }
+      .hero-meta span {
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+      .scroll-cue {
+        display: none;
+      }
       .formerly,
       .ko,
       .section-lead {
@@ -386,8 +593,23 @@
       .actions .button {
         width: 100%;
       }
+      .make-section {
+        padding: 52px 0;
+      }
+      .make-grid {
+        grid-template-columns: 1fr;
+      }
+      .make-card {
+        min-height: 360px;
+      }
       .status-row {
         grid-template-columns: 1fr;
+      }
+      .catalog-section {
+        padding: 54px 0;
+      }
+      .catalog-section .wrap {
+        width: calc(100% - 22px);
       }
       .catalog-scroller {
         display: block;
@@ -402,8 +624,12 @@
         min-height: 0;
       }
       .catalog-step {
-        min-height: 46vh;
-        margin-bottom: 14px;
+        min-height: 124px;
+        margin-bottom: 10px;
+        transform: none;
+      }
+      .catalog-step.is-active {
+        transform: none;
       }
     }
     @media (max-width: 480px) {
@@ -414,7 +640,16 @@
   </style>
 </head>
 <body>
-  <header>
+  <nav class="top-nav" aria-label="Primary">
+    <a class="brand-mark" href="#top">Tiger <span>Studio</span></a>
+    <div class="nav-links">
+      <a href="#make">Make</a>
+      <a href="#product-walkthrough">Showcase</a>
+      <a href="docs/product_catalog/SPEC.md">Spec</a>
+      <a href="https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2">Download</a>
+    </div>
+  </nav>
+  <header id="top">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Subculture-ready video editor</div>
@@ -430,31 +665,51 @@
           <a class="button primary" href="https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2">Download installer</a>
           <a class="button" href="docs/product_catalog/SPEC.md">View public spec</a>
         </div>
+        <div class="hero-meta" aria-label="Core workflows">
+          <span>Timeline editor</span>
+          <span>Screen polish</span>
+          <span>Character actors</span>
+          <span>Voice / Music</span>
+          <span>AR / PBR</span>
+        </div>
       </div>
     </div>
+    <div class="scroll-cue">Scroll Showcase</div>
   </header>
 
   <main>
-    <section>
+    <section class="make-section" id="make">
       <div class="wrap">
         <h2>What You Can Make</h2>
         <p class="section-lead">Tiger Studio is organized around finished creator output, not isolated utility panels.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>Polished screen recordings</h3>
-            <p>Screen Studio-style cursor, zoom, click, hotkey, and export polish for tutorials and product videos.</p>
+        <div class="make-grid">
+          <article class="make-card" style="--tile-bg: url('docs/product_catalog/slides_en/06_timeline.png')">
+            <div class="make-copy">
+              <span>01</span>
+              <h3>Polished screen recordings</h3>
+              <p>Screen Studio-style cursor, zoom, click, hotkey, and export polish for tutorials and product videos.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Character videos</h3>
-            <p>Live2D, Spine, MMD, and VRM actor tracks for edited videos, shorts, and avatar-driven scenes.</p>
+          <article class="make-card" style="--tile-bg: url('docs/product_catalog/slides_en/16_live2d_spine.png')">
+            <div class="make-copy">
+              <span>02</span>
+              <h3>Character videos</h3>
+              <p>Live2D, Spine, MMD, and VRM actor tracks for edited videos, shorts, and avatar-driven scenes.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Shorts and social clips</h3>
-            <p>Captions, vertical templates, hooks, publish packages, and render queue handoff for creator workflows.</p>
+          <article class="make-card" style="--tile-bg: url('docs/product_catalog/slides_en/20_creator_assist.png')">
+            <div class="make-copy">
+              <span>03</span>
+              <h3>Shorts and social clips</h3>
+              <p>Captions, vertical templates, hooks, publish packages, and render queue handoff for creator workflows.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Voice, music, and presentation videos</h3>
-            <p>Voice Lab direction, Music Lab, subtitles, and PPT-style pages for explainer and character content.</p>
+          <article class="make-card" style="--tile-bg: url('docs/product_catalog/slides_en/14_audio_workbench.png')">
+            <div class="make-copy">
+              <span>04</span>
+              <h3>Voice, music, and presentation videos</h3>
+              <p>Voice Lab direction, Music Lab, subtitles, and PPT-style pages for explainer and character content.</p>
+            </div>
           </article>
         </div>
       </div>
