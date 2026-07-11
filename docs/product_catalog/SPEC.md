@@ -83,28 +83,27 @@ without moving through several disconnected tools.
 
 ## Public Catalog Image Order
 
-1. `01_studio_overview.png`
-2. `02_studio_surface.png`
-3. `03_ai_workflow.png`
-4. `04_ppt_maker.png`
-5. `05_media_pool.png`
-6. `06_timeline.png`
-7. `07_effects.png`
-8. `08_transitions.png`
-9. `09_typography.png`
-10. `10_keyframes.png`
-11. `11_color.png`
-12. `12_node_graph.png`
-13. `13_node_effects.png`
-14. `14_audio_workbench.png`
-15. `15_audio_curves.png`
-16. `16_live2d_spine.png`
-17. `17_vrm.png`
-18. `18_mmd.png`
-19. `19_ar_pbr.png`
-20. `20_creator_assist.png`
-21. `21_export.png`
-22. `22_closing.png`
+1. `02_studio_surface.png`
+2. `03_ai_workflow.png`
+3. `04_ppt_maker.png`
+4. `05_media_pool.png`
+5. `06_timeline.png`
+6. `07_effects.png`
+7. `08_transitions.png`
+8. `09_typography.png`
+9. `10_keyframes.png`
+10. `11_color.png`
+11. `12_node_graph.png`
+12. `13_node_effects.png`
+13. `14_audio_workbench.png`
+14. `15_audio_curves.png`
+15. `16_live2d_spine.png`
+16. `17_vrm.png`
+17. `18_mmd.png`
+18. `19_ar_pbr.png`
+19. `20_creator_assist.png`
+20. `21_export.png`
+21. `22_closing.png`
 
 ## Release Notes Boundary
 

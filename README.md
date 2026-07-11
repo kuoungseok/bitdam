@@ -15,10 +15,6 @@ catalog screenshots, and installer releases.
 The catalog screenshots below are shown directly in the repository root so the
 public page can be scanned without opening each image link one by one.
 
-<p align="center">
-  <img src="docs/product_catalog/slides_en/01_studio_overview.png" alt="TigerCapture Studio Overview" width="920">
-</p>
-
 |  |  |
 |---|---|
 | <img src="docs/product_catalog/slides_en/02_studio_surface.png" alt="Studio Surface" width="460"><br><sub>02 Studio Surface</sub> | <img src="docs/product_catalog/slides_en/03_ai_workflow.png" alt="AI Workflow" width="460"><br><sub>03 AI Workflow</sub> |
