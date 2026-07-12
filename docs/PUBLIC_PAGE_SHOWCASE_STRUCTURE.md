@@ -294,7 +294,8 @@ Design rules:
 - The scene index should feel like a control rail.
 - The current scene backdrop should feel cinematic: blurred, darkened, and still lightly recognizable behind the content.
 - On mobile, collapse to single-column: full-width preview first, then compact scene blocks.
-- Do not constrain the Product Walkthrough preview to a narrow mobile card; it should use nearly the full phone viewport width.
+- On mobile, the Product Walkthrough preview must fit inside the phone viewport with no horizontal scroll.
+- Do not constrain the Product Walkthrough preview to a narrow card; use the available viewport width, but never exceed it.
 
 ## 8. Footer
 
