@@ -78,7 +78,9 @@ Behavior:
 
 - Fixed on desktop.
 - Compact on mobile.
-- Link `Download` to the latest public installer release.
+- Link `Download` to the latest public installer release when downloads are
+  open. While downloads are paused, link it to the local `Not yet` download
+  notice.
 - Link `Spec` to the public product spec Markdown.
 
 ## 2. Full-screen Hero
@@ -104,7 +106,7 @@ Korean subcopy:
 
 CTA:
 
-- Download installer
+- Download installer, or `Download: Not yet` while downloads are paused
 - View public spec
 
 Workflow pills:
@@ -302,7 +304,8 @@ Recommended copy:
 Public distribution page for Tiger Studio, formerly TigerCapture.
 
 Optional:
-Installer SHA-256 for the current public installer.
+Installer SHA-256 for the current public installer, or a clear `Not yet`
+download notice while downloads are paused.
 
 Design rules:
 

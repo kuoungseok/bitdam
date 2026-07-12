@@ -6,7 +6,7 @@ Formerly TigerCapture. Local-first on Windows.
 
 화면녹화, 쇼츠 편집, Live2D/Spine/MMD/VRM 캐릭터, 음성, 음악, 발표 페이지를 한 프로젝트에서 다루는 로컬 우선 영상편집 스튜디오입니다.
 
-- [Download installer](https://github.com/kuoungseok/tigercapture/releases/tag/v1.4.2)
+- [Download: Not yet](https://kuoungseok.github.io/tigercapture/#download-not-yet)
 - [View public spec](docs/product_catalog/SPEC.md)
 - [Open product page](https://kuoungseok.github.io/tigercapture/)
 
@@ -97,10 +97,8 @@ Resolve급 전문 후반작업 툴이나 Cubism 같은 모델 제작툴을 대�
 
 ## Current Public Build
 
-- Installer: `TigerCapture-Setup-1.4.2.exe`
-- SHA-256:
-  `75EE94D571F23755D77AD5FC5107A4D583BBE2B4CD04C58C3BBA64C48ABA86BF`
-- Platform: Windows x64
+Public Windows downloads are temporarily paused while the current build is
+being validated for packaging, signing, and release-readiness gates.
 
 ## License
 

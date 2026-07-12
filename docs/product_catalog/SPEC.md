@@ -116,5 +116,6 @@ Korean: 화면녹화, 쇼츠, 캐릭터 영상, 음성, 음악, 발표 페이지
 ## Release Notes Boundary
 
 This public distribution repository should contain release-safe pages,
-screenshots, installers, and metadata. Installer binaries are distributed
-through GitHub Releases.
+screenshots, installers, and metadata. Public installer downloads are
+temporarily paused until the current packaged build passes release-readiness
+gates.
