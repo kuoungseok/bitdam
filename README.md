@@ -2,7 +2,7 @@
 
 **Subculture-ready video editor for screen, shorts, and character creators.**
 
-Formerly TigerCapture. Local-first on Windows.
+Local-first creator video studio for Windows.
 
 화면녹화, 쇼츠 편집, Live2D/Spine/MMD/VRM 캐릭터, 음성, 음악, 발표 페이지를 한 프로젝트에서 다루는 로컬 우선 영상편집 스튜디오입니다.
 

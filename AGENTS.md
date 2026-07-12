@@ -31,7 +31,8 @@ details, local diagnostics, or non-release materials.
 ## Brand Rules
 
 - Main product name: `Tiger Studio`
-- Secondary continuity name only: `formerly TigerCapture`
+- Do not use `TigerCapture` as visible product copy.
+- `tigercapture` may remain only in repository URLs, package identifiers, or other technical continuity strings.
 - Positioning: `Subculture-ready video editor for screen, shorts, and character creators.`
 - Keep the page video-editor-first and character/subculture-ready.
 - Do not let the page read as only a capture utility.
@@ -53,6 +54,6 @@ Before committing public page changes:
 
 - Verify referenced images and docs exist.
 - Check that no non-release materials were added.
-- Check that `TigerCapture` is not used as the primary hero/product name.
+- Check that `TigerCapture` is not used as visible product copy.
 - Keep `gh-pages` and `release` public page files in sync when both worktrees
   are being maintained.
