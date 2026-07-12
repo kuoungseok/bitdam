@@ -284,6 +284,42 @@
       color: var(--muted);
       font-size: 15px;
     }
+    .demo-section {
+      padding: 34px 0;
+      background: #090c11;
+    }
+    .demo-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+      gap: 18px;
+      align-items: center;
+    }
+    .demo-video {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      border: 1px solid rgba(84, 102, 128, 0.58);
+      border-radius: 8px;
+      background: #000;
+      object-fit: contain;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+    }
+    .demo-copy h2 {
+      margin-bottom: 10px;
+      font-size: clamp(24px, 2.8vw, 38px);
+    }
+    .demo-copy .section-lead {
+      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .demo-copy .ko {
+      max-width: 480px;
+      margin: 0;
+      color: rgba(199, 208, 223, 0.62);
+      font-size: 10px;
+      line-height: 1.55;
+    }
     .make-section {
       padding: 78px 0;
       background: #0b0d12;
@@ -549,6 +585,7 @@
         max-width: 1180px;
       }
       .hero-grid,
+      .demo-layout,
       .positioning {
         grid-template-columns: 1fr;
       }
@@ -602,6 +639,12 @@
       }
       .make-section {
         padding: 52px 0;
+      }
+      .demo-video {
+        max-height: 360px;
+      }
+      .demo-copy .ko {
+        font-size: 9px;
       }
       .make-grid {
         grid-template-columns: 1fr;
@@ -697,7 +740,7 @@
           <span>for screen, shorts,</span>
           <span>and character creators.</span>
         </p>
-        <p class="formerly">Formerly TigerCapture. Local-first on Windows.</p>
+        <p class="formerly">Local-first creator video studio for Windows.</p>
         <p class="ko">화면녹화, 쇼츠 편집, Live2D/Spine/MMD/VRM 캐릭터, 음성, 음악, 발표 페이지를 한 프로젝트에서 다루는 로컬 우선 영상편집 스튜디오입니다.</p>
         <div class="actions">
           <a class="button primary" href="#download-not-yet">Download: Not yet</a>
@@ -716,6 +759,21 @@
   </header>
 
   <main>
+    <section class="demo-section" id="ai-editing-process-demo">
+      <div class="wrap demo-layout">
+        <video class="demo-video" controls muted playsinline preload="metadata" poster="docs/demo/tigerstudio_ai_full_process_demo_poster.png">
+          <source src="docs/demo/tigerstudio_ai_full_process_demo.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="demo-copy">
+          <div class="eyebrow">AI Editing Process Demo</div>
+          <h2>From media pool to finished timeline.</h2>
+          <p class="section-lead">Watch Tiger Studio build an edited scene from imported clips through timeline cuts, node effects, color, blur, split compare, and final playback.</p>
+          <p class="ko">AI가 여러 영상 클립을 불러와 타임라인에 배치하고, 컷/전환/속도/노드 이펙트/컬러 그레이딩/블러/스플릿 비교를 거쳐 완성 장면까지 재생하는 과정을 보여줍니다.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="make-section" id="make">
       <div class="wrap">
         <h2>What You Can Make</h2>
@@ -852,7 +910,7 @@
 
   <footer>
     <div class="wrap">
-      Public distribution page for Tiger Studio, formerly TigerCapture.
+      Public distribution page for Tiger Studio.
       Public installer downloads are not open yet.
     </div>
   </footer>
@@ -889,6 +947,36 @@
         rootMargin: "-18% 0px -28% 0px"
       });
       steps.forEach((step) => observer.observe(step));
+    }
+
+    const demoVideo = document.querySelector(".demo-video");
+    if (demoVideo) {
+      demoVideo.muted = true;
+      demoVideo.playsInline = true;
+
+      const playDemoVideo = () => {
+        if (!demoVideo.paused) return;
+        demoVideo.play().catch(() => {
+          demoVideo.controls = true;
+        });
+      };
+
+      if ("IntersectionObserver" in window) {
+        const demoObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.42) {
+              playDemoVideo();
+            } else if (!demoVideo.paused) {
+              demoVideo.pause();
+            }
+          });
+        }, {
+          root: null,
+          threshold: [0, 0.42, 0.7],
+          rootMargin: "-8% 0px -12% 0px"
+        });
+        demoObserver.observe(demoVideo);
+      }
     }
   </script>
 </body>
