@@ -372,7 +372,7 @@
     .status-row strong { color: var(--green); }
     .status-row span { color: var(--muted); }
     .catalog-section {
-      --catalog-bg: url("docs/product_catalog/slides_en/02_studio_surface.png");
+      --catalog-bg: url("docs/product_catalog/slides_en/01_studio_overview.png");
       position: relative;
       isolation: isolate;
       clip-path: inset(0);
@@ -446,9 +446,8 @@
     .catalog-stage img {
       display: block;
       width: 100%;
-      height: 100%;
       aspect-ratio: 16 / 9;
-      min-height: min(72vh, 760px);
+      height: auto;
       object-fit: contain;
       background: #080b10;
       transition: opacity 180ms ease;
@@ -631,10 +630,10 @@
       }
       .catalog-stage {
         top: 0;
-        margin-bottom: 16px;
-        border-radius: 0 0 8px 8px;
+        margin: 0 0 16px;
         border-left: 0;
         border-right: 0;
+        border-radius: 0;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -657,19 +656,25 @@
       .catalog-steps {
         width: calc(100% - 22px);
         margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0;
       }
       .catalog-step {
-        min-height: 124px;
-        margin-bottom: 10px;
+        min-height: 92px;
+        margin-bottom: 0;
+        padding: 10px;
         transform: none;
       }
       .catalog-step.is-active {
         transform: none;
       }
+      .catalog-step p {
+        display: none;
+      }
     }
     @media (max-width: 480px) {
       .wrap {
-        width: min(340px, calc(100% - 22px));
+        width: calc(100% - 20px);
       }
       .catalog-section .wrap {
         width: 100%;
@@ -823,9 +828,9 @@
             <article class="catalog-step" data-num="11" data-title="Color" data-image="docs/product_catalog/slides_en/11_color.png" data-alt="Color"><div class="catalog-kicker">11</div><h3>Color</h3><p>LUTs, scopes, color metadata, and workflow checks for repeatable output.</p></article>
             <article class="catalog-step" data-num="12" data-title="Node Graph" data-image="docs/product_catalog/slides_en/12_node_graph.png" data-alt="Node Graph"><div class="catalog-kicker">12</div><h3>Node Graph</h3><p>A workbench surface for graph-based effects and compositing experiments.</p></article>
             <article class="catalog-step" data-num="13" data-title="Node Effects" data-image="docs/product_catalog/slides_en/13_node_effects.png" data-alt="Node Effects"><div class="catalog-kicker">13</div><h3>Node Effects</h3><p>Effect nodes, masks, and previewable processing chains for advanced edits.</p></article>
-            <article class="catalog-step" data-num="14" data-title="Music Lab" data-image="docs/product_catalog/slides_en/14_music_lab.png" data-alt="Music Lab"><div class="catalog-kicker">14</div><h3>Music Lab</h3><p>Prompt composition, sections, notes, and timeline render direction for music-backed videos.</p></article>
+            <article class="catalog-step" data-num="14" data-title="Music Lab" data-image="docs/product_catalog/slides_en/14_music_lab.png" data-alt="Music Lab"><div class="catalog-kicker">14</div><h3>Music Lab</h3><p>Prompt-driven composition creates editable sections, chords, MIDI notes, and renderable stems.</p></article>
             <article class="catalog-step" data-num="15" data-title="Audio Workbench" data-image="docs/product_catalog/slides_en/15_audio_workbench.png" data-alt="Audio Workbench"><div class="catalog-kicker">15</div><h3>Audio Workbench</h3><p>Sound Editor, mix controls, loudness helpers, and production audio surfaces.</p></article>
-            <article class="catalog-step" data-num="16" data-title="Audio Curves" data-image="docs/product_catalog/slides_en/16_audio_curves.png" data-alt="Audio Curves"><div class="catalog-kicker">16</div><h3>Audio Curves</h3><p>Curves, automation, and diagnostics for shaping sound over time.</p></article>
+            <article class="catalog-step" data-num="16" data-title="Audio Curves" data-image="docs/product_catalog/slides_en/16_audio_curves.png" data-alt="Audio Curves"><div class="catalog-kicker">16</div><h3>Audio Curves</h3><p>Curves, automation, dynamics, EQ, and diagnostics for shaping sound over time.</p></article>
             <article class="catalog-step" data-num="17" data-title="Live2D / Spine" data-image="docs/product_catalog/slides_en/17_live2d_spine.png" data-alt="Live2D and Spine"><div class="catalog-kicker">17</div><h3>Live2D / Spine</h3><p>Character actors as timeline assets, with compatibility and render diagnostics.</p></article>
             <article class="catalog-step" data-num="18" data-title="VRM" data-image="docs/product_catalog/slides_en/18_vrm.png" data-alt="VRM"><div class="catalog-kicker">18</div><h3>VRM</h3><p>VTuber avatar workflows, performance-source mapping, and broadcast output foundations.</p></article>
             <article class="catalog-step" data-num="19" data-title="MMD" data-image="docs/product_catalog/slides_en/19_mmd.png" data-alt="MMD"><div class="catalog-kicker">19</div><h3>MMD</h3><p>PMX/PMD and VMD-oriented actor workflows for local character production.</p></article>

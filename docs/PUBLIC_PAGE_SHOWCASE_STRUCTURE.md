@@ -277,9 +277,9 @@ Scene list:
 | 11 | Color | `docs/product_catalog/slides_en/11_color.png` | LUTs, scopes, color metadata, and workflow checks for repeatable output. |
 | 12 | Node Graph | `docs/product_catalog/slides_en/12_node_graph.png` | A workbench surface for graph-based effects and compositing experiments. |
 | 13 | Node Effects | `docs/product_catalog/slides_en/13_node_effects.png` | Effect nodes, masks, and previewable processing chains for advanced edits. |
-| 14 | Music Lab | `docs/product_catalog/slides_en/14_music_lab.png` | Prompt composition, sections, notes, and timeline render direction for music-backed videos. |
+| 14 | Music Lab | `docs/product_catalog/slides_en/14_music_lab.png` | Prompt-driven composition creates editable sections, chords, MIDI notes, and renderable stems. |
 | 15 | Audio Workbench | `docs/product_catalog/slides_en/15_audio_workbench.png` | Sound Editor, mix controls, loudness helpers, and production audio surfaces. |
-| 16 | Audio Curves | `docs/product_catalog/slides_en/16_audio_curves.png` | Curves, automation, and diagnostics for shaping sound over time. |
+| 16 | Audio Curves | `docs/product_catalog/slides_en/16_audio_curves.png` | Curves, automation, dynamics, EQ, and diagnostics for shaping sound over time. |
 | 17 | Live2D / Spine | `docs/product_catalog/slides_en/17_live2d_spine.png` | Character actors as timeline assets, with compatibility and render diagnostics. |
 | 18 | VRM | `docs/product_catalog/slides_en/18_vrm.png` | VTuber avatar workflows, performance-source mapping, and broadcast output foundations. |
 | 19 | MMD | `docs/product_catalog/slides_en/19_mmd.png` | PMX/PMD and VMD-oriented actor workflows for local character production. |
@@ -293,7 +293,8 @@ Design rules:
 - The preview image should be at least four times wider than the scene index on desktop.
 - The scene index should feel like a control rail.
 - The current scene backdrop should feel cinematic: blurred, darkened, and still lightly recognizable behind the content.
-- On mobile, collapse to single-column: preview first, then compact scene blocks.
+- On mobile, collapse to single-column: full-width preview first, then compact scene blocks.
+- Do not constrain the Product Walkthrough preview to a narrow mobile card; it should use nearly the full phone viewport width.
 
 ## 8. Footer
 
