@@ -320,6 +320,66 @@
       font-size: 10px;
       line-height: 1.55;
     }
+    .output-section {
+      padding: 58px 0;
+      background:
+        radial-gradient(circle at 78% 42%, rgba(105, 255, 185, 0.09), transparent 30%),
+        radial-gradient(circle at 18% 72%, rgba(103, 216, 255, 0.10), transparent 34%),
+        #080b10;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .output-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(320px, 1.22fr);
+      gap: 24px;
+      align-items: center;
+    }
+    .output-copy h2 {
+      max-width: 720px;
+      margin-bottom: 12px;
+      font-size: clamp(28px, 4vw, 56px);
+      line-height: 0.96;
+    }
+    .output-copy .section-lead {
+      max-width: 700px;
+      margin-bottom: 12px;
+      color: rgba(242, 245, 251, 0.82);
+      font-size: 16px;
+    }
+    .output-copy .ko {
+      max-width: 640px;
+      margin: 0;
+      color: rgba(199, 208, 223, 0.64);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+    .output-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(103, 216, 255, 0.34);
+      border-radius: 8px;
+      background: #000;
+      object-fit: contain;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
+    }
+    .output-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .output-meta span {
+      border: 1px solid rgba(215, 222, 234, 0.16);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: rgba(242, 245, 251, 0.72);
+      background: rgba(15, 19, 27, 0.72);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
     .make-section {
       padding: 78px 0;
       background: #0b0d12;
@@ -643,6 +703,18 @@
       .demo-video {
         max-height: 360px;
       }
+      .output-layout {
+        grid-template-columns: 1fr;
+      }
+      .output-section {
+        padding: 46px 0;
+      }
+      .output-copy h2 {
+        font-size: clamp(26px, 11vw, 42px);
+      }
+      .output-copy .section-lead {
+        font-size: 14px;
+      }
       .demo-copy .ko {
         font-size: 9px;
       }
@@ -808,6 +880,27 @@
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="output-section" id="character-commentary-output">
+      <div class="wrap output-layout">
+        <div class="output-copy">
+          <div class="eyebrow">Character Commentary Output</div>
+          <h2>A finished Live2D voice scene.</h2>
+          <p class="section-lead">A 30-second Tokyo night-view commentary scene with Japanese TTS, subtitles, Live2D motion, natural blink, and lip-sync.</p>
+          <p class="ko">&#46020;&#53188; &#50556;&#44221; &#53364;&#47549; &#50948;&#50640; &#51068;&#48376;&#50612; TTS, &#51088;&#47561;, Live2D &#47784;&#49496;, &#45576;&#44636;&#48149;&#51076;, &#47549;&#49905;&#53356;&#47484; &#54633;&#49457;&#54620; 30&#52488; &#52880;&#47533;&#53552; &#50689;&#49345; &#50696;&#49884;&#51077;&#45768;&#45796;.</p>
+          <div class="output-meta" aria-label="Character commentary demo ingredients">
+            <span>Tokyo clip</span>
+            <span>koharune-ami voice</span>
+            <span>Live2D motion</span>
+            <span>Lip-sync</span>
+          </div>
+        </div>
+        <video class="output-video" controls playsinline preload="metadata" poster="docs/demo/tigerstudio_character_commentary_demo_poster.jpg">
+          <source src="docs/demo/tigerstudio_character_commentary_demo.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
       </div>
     </section>
 
