@@ -320,6 +320,75 @@
       font-size: 10px;
       line-height: 1.55;
     }
+    .output-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(18px, 3vw, 34px);
+      align-items: start;
+    }
+    .output-card {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .output-card + .output-card::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: calc(clamp(18px, 3vw, 34px) / -2);
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(215, 222, 234, 0.18), transparent);
+    }
+    .composer-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(141, 255, 176, 0.28);
+      border-radius: 8px;
+      background: #000;
+      object-fit: contain;
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+    }
+    .composer-copy h2 {
+      max-width: 720px;
+      margin-bottom: 12px;
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 0.98;
+      word-break: keep-all;
+    }
+    .composer-copy .section-lead {
+      max-width: 680px;
+      margin-bottom: 12px;
+      color: rgba(242, 245, 251, 0.82);
+      font-size: 17px;
+    }
+    .composer-copy .ko {
+      max-width: 640px;
+      margin: 0;
+      color: rgba(199, 208, 223, 0.68);
+      font-size: 13px;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    .composer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .composer-meta span {
+      border: 1px solid rgba(215, 222, 234, 0.16);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: rgba(242, 245, 251, 0.74);
+      background: rgba(15, 19, 27, 0.72);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
     .output-section {
       padding: 58px 0;
       background:
@@ -329,16 +398,10 @@
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .output-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.78fr) minmax(320px, 1.22fr);
-      gap: 24px;
-      align-items: center;
-    }
     .output-copy h2 {
       max-width: 720px;
       margin-bottom: 12px;
-      font-size: clamp(28px, 4vw, 56px);
+      font-size: clamp(25px, 3vw, 42px);
       line-height: 0.96;
     }
     .output-copy .section-lead {
@@ -646,6 +709,7 @@
       }
       .hero-grid,
       .demo-layout,
+      .output-pair,
       .positioning {
         grid-template-columns: 1fr;
       }
@@ -703,11 +767,26 @@
       .demo-video {
         max-height: 360px;
       }
-      .output-layout {
-        grid-template-columns: 1fr;
+      .composer-copy h2 {
+        font-size: clamp(30px, 10vw, 44px);
+      }
+      .composer-copy .section-lead {
+        font-size: 14px;
+      }
+      .composer-copy .ko {
+        font-size: 12px;
+        word-break: normal;
+        overflow-wrap: anywhere;
       }
       .output-section {
         padding: 46px 0;
+      }
+      .output-card + .output-card {
+        padding-top: 22px;
+        border-top: 1px solid rgba(215, 222, 234, 0.12);
+      }
+      .output-card + .output-card::before {
+        content: none;
       }
       .output-copy h2 {
         font-size: clamp(26px, 11vw, 42px);
@@ -796,6 +875,7 @@
   <nav class="top-nav" aria-label="Primary">
     <a class="brand-mark" href="#top">Tiger <span>Studio</span></a>
     <div class="nav-links">
+      <a href="#composer-classical">Composer</a>
       <a href="#make">Make</a>
       <a href="#product-walkthrough">Showcase</a>
       <a href="docs/product_catalog/SPEC.md">Spec</a>
@@ -884,23 +964,43 @@
     </section>
 
     <section class="output-section" id="character-commentary-output">
-      <div class="wrap output-layout">
-        <div class="output-copy">
-          <div class="eyebrow">Character Commentary Output</div>
-          <h2>A finished Live2D voice scene.</h2>
-          <p class="section-lead">A 30-second Tokyo night-view commentary scene with Japanese TTS, subtitles, Live2D motion, natural blink, and lip-sync.</p>
-          <p class="ko">&#46020;&#53188; &#50556;&#44221; &#53364;&#47549; &#50948;&#50640; &#51068;&#48376;&#50612; TTS, &#51088;&#47561;, Live2D &#47784;&#49496;, &#45576;&#44636;&#48149;&#51076;, &#47549;&#49905;&#53356;&#47484; &#54633;&#49457;&#54620; 30&#52488; &#52880;&#47533;&#53552; &#50689;&#49345; &#50696;&#49884;&#51077;&#45768;&#45796;.</p>
-          <div class="output-meta" aria-label="Character commentary demo ingredients">
-            <span>Tokyo clip</span>
-            <span>koharune-ami voice</span>
-            <span>Live2D motion</span>
-            <span>Lip-sync</span>
+      <div class="wrap output-pair">
+        <article class="output-card">
+          <video class="output-video" controls playsinline preload="metadata" poster="docs/demo/tigerstudio_character_commentary_demo_poster.jpg">
+            <source src="docs/demo/tigerstudio_character_commentary_demo.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="output-copy">
+            <div class="eyebrow">Character Commentary Output</div>
+            <h2>A finished Live2D voice scene.</h2>
+            <p class="section-lead">A 30-second Tokyo night-view commentary scene with Japanese TTS, subtitles, Live2D motion, natural blink, and lip-sync.</p>
+            <p class="ko">&#46020;&#53188; &#50556;&#44221; &#53364;&#47549; &#50948;&#50640; &#51068;&#48376;&#50612; TTS, &#51088;&#47561;, Live2D &#47784;&#49496;, &#45576;&#44636;&#48149;&#51076;, &#47549;&#49905;&#53356;&#47484; &#54633;&#49457;&#54620; 30&#52488; &#52880;&#47533;&#53552; &#50689;&#49345; &#50696;&#49884;&#51077;&#45768;&#45796;.</p>
+            <div class="output-meta" aria-label="Character commentary demo ingredients">
+              <span>Tokyo clip</span>
+              <span>koharune-ami voice</span>
+              <span>Live2D motion</span>
+              <span>Lip-sync</span>
+            </div>
           </div>
-        </div>
-        <video class="output-video" controls playsinline preload="metadata" poster="docs/demo/tigerstudio_character_commentary_demo_poster.jpg">
-          <source src="docs/demo/tigerstudio_character_commentary_demo.mp4" type="video/mp4">
-          Your browser does not support embedded video.
-        </video>
+        </article>
+        <article class="output-card" id="composer-classical">
+          <video class="composer-video" controls playsinline preload="metadata">
+            <source src="docs/demo/tigerstudio_composer_classical_oneclick_demo.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="composer-copy">
+            <div class="eyebrow">One-click Classical Composer</div>
+            <h2>작곡을 몰라도, 한 방에 클래식곡을 쓸 수 있다.</h2>
+            <p class="section-lead">Type the idea. Tiger Studio plans sections, notes, arrangement, and preview playback so non-composers can shape a classical cue instead of drawing every note by hand.</p>
+            <p class="ko">프롬프트 한 줄에서 악곡 구조, 오케스트라 레이어, 미리듣기 영상을 생성하고 타임라인에서 계속 수정할 수 있습니다.</p>
+            <div class="composer-meta" aria-label="Composer demo ingredients">
+              <span>Prompt to arrangement</span>
+              <span>Classical cue</span>
+              <span>Editable timeline</span>
+              <span>Preview with audio</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
