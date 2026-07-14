@@ -12,7 +12,7 @@ Main name:
 Tiger Studio
 
 Secondary name:
-Formerly TigerCapture
+Repository continuity only: the public URL may contain `tigercapture`, but visible product copy uses Tiger Studio.
 
 Primary positioning:
 Subculture-ready video editor for screen, shorts, and character creators.
@@ -26,7 +26,7 @@ Korean support copy:
 - Public repo content should stay limited to the landing page, public docs, release notes, installers, screenshots, catalog images, and release-safe specs.
 - Keep English as the main public copy. Use Korean as supporting copy, not as the only explanation.
 - Present Tiger Studio as video-editor-first. Screen capture is one workflow, not the product identity.
-- Keep TigerCapture only as "formerly TigerCapture" or repository continuity text.
+- Keep the legacy product name out of visible product copy. `tigercapture` may appear only in repository URLs or technical continuity text.
 
 ## Visual Direction
 
@@ -48,7 +48,7 @@ Avoid:
 - Long developer explanations.
 - Tiny screenshots.
 - A page that reads as a capture utility.
-- Old TigerCapture hero artwork as the first signal.
+- Old legacy-branded hero artwork as the first signal.
 
 ## Page Order
 
@@ -99,7 +99,7 @@ Subtitle:
 Subculture-ready video editor for screen, shorts, and character creators.
 
 Support line:
-Formerly TigerCapture. Local-first on Windows.
+Local-first creator video studio for Windows.
 
 Korean subcopy:
 화면녹화, 쇼츠 편집, Live2D/Spine/MMD/VRM 캐릭터, 음성, 음악, 발표 페이지를 한 프로젝트에서 다루는 로컬 우선 영상편집 스튜디오입니다.
@@ -122,7 +122,7 @@ Design rules:
 - H1 must be the largest text on the page.
 - The first viewport must show `Tiger Studio`, the short positioning line, and the download button.
 - Do not put the hero text inside a card.
-- Do not make `TigerCapture` larger than `Tiger Studio`.
+- Do not show a legacy product name.
 
 ## 3. What You Can Make
 
@@ -299,7 +299,7 @@ Purpose:
 Give release continuity without distracting from the product page.
 
 Recommended copy:
-Public distribution page for Tiger Studio, formerly TigerCapture.
+Public distribution page for Tiger Studio.
 
 Optional:
 Installer SHA-256 for the current public installer, or a clear `Not yet`
@@ -315,7 +315,7 @@ Design rules:
 Before publishing a public page update:
 
 - The first viewport clearly says `Tiger Studio`.
-- `TigerCapture` only appears as a secondary former name or repository continuity note.
+- The legacy product name does not appear as visible product copy; `tigercapture` may remain only in repository URLs or technical continuity notes.
 - The page reads as a creator video editor, not a capture app.
 - All images are local public assets or stable public release assets.
 - No non-release packages, private build notes, or internal workflow details are exposed.

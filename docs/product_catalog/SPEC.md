@@ -1,8 +1,8 @@
 # Tiger Studio Public Product Spec
 
 This document is a public, release-safe summary of the current Tiger Studio
-product direction. Tiger Studio was formerly called TigerCapture; the public
-repository still uses the `tigercapture` name for distribution continuity.
+product direction. The public repository URL may still contain `tigercapture`
+for distribution continuity, but the product name is Tiger Studio.
 This page focuses on release-safe product behavior shown in the product catalog
 screenshots.
 
