@@ -26,7 +26,7 @@ Korean support copy:
 - Public repo content should stay limited to the landing page, public docs, release notes, installers, screenshots, catalog images, and release-safe specs.
 - Keep English as the main public copy. Use Korean as supporting copy, not as the only explanation.
 - Present Tiger Studio as video-editor-first. Screen capture is one workflow, not the product identity.
-- Keep `TigerCapture` out of visible product copy. `tigercapture` may appear only in repository URLs or technical continuity text.
+- Keep the legacy product name out of visible product copy. `tigercapture` may appear only in repository URLs or technical continuity text.
 
 ## Visual Direction
 
@@ -48,7 +48,7 @@ Avoid:
 - Long developer explanations.
 - Tiny screenshots.
 - A page that reads as a capture utility.
-- Old TigerCapture-branded hero artwork as the first signal.
+- Old legacy-branded hero artwork as the first signal.
 
 ## Page Order
 
@@ -123,7 +123,7 @@ Design rules:
 - H1 must be the largest text on the page.
 - The first viewport must show `Tiger Studio`, the short positioning line, and the download button.
 - Do not put the hero text inside a card.
-- Do not show `TigerCapture` as a product name.
+- Do not show a legacy product name.
 
 ## 3. What You Can Make
 
@@ -351,7 +351,7 @@ Design rules:
 Before publishing a public page update:
 
 - The first viewport clearly says `Tiger Studio`.
-- `TigerCapture` does not appear as visible product copy; `tigercapture` may remain only in repository URLs or technical continuity notes.
+- The legacy product name does not appear as visible product copy; `tigercapture` may remain only in repository URLs or technical continuity notes.
 - The page reads as a creator video editor, not a capture app.
 - All images are local public assets or stable public release assets.
 - No non-release packages, private build notes, or internal workflow details are exposed.
