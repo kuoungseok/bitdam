@@ -389,6 +389,45 @@
       font-weight: 800;
       text-transform: uppercase;
     }
+    .painter-demo-section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 18% 34%, rgba(226, 168, 65, 0.10), transparent 32%),
+        #0a0d12;
+    }
+    .painter-demo-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+      gap: clamp(24px, 4vw, 52px);
+      align-items: center;
+    }
+    .painter-demo-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1336 / 958;
+      border: 1px solid rgba(226, 168, 65, 0.34);
+      border-radius: 8px;
+      background: #000;
+      object-fit: contain;
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+    }
+    .painter-demo-copy h2 {
+      margin-bottom: 12px;
+      font-size: clamp(27px, 3vw, 43px);
+      line-height: 0.98;
+    }
+    .painter-demo-copy .section-lead {
+      margin-bottom: 14px;
+      color: rgba(242, 245, 251, 0.82);
+      font-size: 16px;
+    }
+    .painter-demo-copy .ko {
+      margin: 0;
+      color: rgba(199, 208, 223, 0.68);
+      font-size: 12px;
+      line-height: 1.65;
+    }
     .output-section {
       padding: 58px 0;
       background:
@@ -710,6 +749,7 @@
       .hero-grid,
       .demo-layout,
       .output-pair,
+      .painter-demo-layout,
       .positioning {
         grid-template-columns: 1fr;
       }
@@ -780,6 +820,15 @@
       }
       .output-section {
         padding: 46px 0;
+      }
+      .painter-demo-section {
+        padding: 42px 0;
+      }
+      .painter-demo-copy h2 {
+        font-size: clamp(28px, 10vw, 42px);
+      }
+      .painter-demo-copy .section-lead {
+        font-size: 14px;
       }
       .output-card + .output-card {
         padding-top: 22px;
@@ -1067,6 +1116,27 @@
             </div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="painter-demo-section" id="painter-ai-brushwork">
+      <div class="wrap painter-demo-layout">
+        <video class="painter-demo-video" controls playsinline preload="metadata" poster="docs/demo/tigerstudio_painter_ai_sunflowers_demo_poster.png">
+          <source src="docs/demo/tigerstudio_painter_ai_sunflowers_demo.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="painter-demo-copy">
+          <div class="eyebrow">AI Painter Brushwork</div>
+          <h2>Describe it. Paint it with editable strokes.</h2>
+          <p class="section-lead">Claude drives Tiger Studio Painter's real brush actions to build a saturated sunflower study inside the production workspace.</p>
+          <p class="ko">The result stays in the Painter stroke and layer workflow instead of becoming a disconnected generated-image preview.</p>
+          <div class="output-meta" aria-label="AI Painter demo ingredients">
+            <span>Claude actions</span>
+            <span>Oil brush strokes</span>
+            <span>Editable layers</span>
+            <span>20-second process</span>
+          </div>
+        </div>
       </div>
     </section>
 
