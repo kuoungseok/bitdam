@@ -284,6 +284,19 @@
       color: var(--muted);
       font-size: 15px;
     }
+    .spec-group-title {
+      margin: 34px 0 14px;
+      color: rgba(242, 245, 251, 0.88);
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .spec-group-title:first-of-type {
+      margin-top: 24px;
+    }
+    .spec-grid {
+      margin-bottom: 0;
+    }
     .demo-section {
       padding: 34px 0;
       background: #090c11;
@@ -1210,19 +1223,45 @@
       </div>
     </section>
 
-    <section class="compact-mobile-section product-spec-section">
+    <section class="compact-mobile-section product-spec-section" id="product-spec-overview">
       <div class="wrap">
         <h2>Product Spec</h2>
-        <p class="section-lead">The current public spec frames Tiger Studio as a video editor with creator-focused workbenches around the timeline.</p>
-        <div class="grid">
-          <article class="card"><h3>Timeline Video Editor</h3><p>Preview, timeline, media pool, inspector, effects, transitions, typography, export, and render queue.</p></article>
-          <article class="card"><h3>Screen Recording Polish</h3><p>Capture, cursor sidecars, zoom planning, click rings, hotkey badges, and polished screen-video export.</p></article>
-          <article class="card"><h3>Character Actors</h3><p>Live2D, Spine, MMD, and VRM workflows treated as editable actor surfaces inside video projects.</p></article>
-          <article class="card"><h3>Voice Lab and Subtitles</h3><p>Subtitle-to-voice direction, actor lip-sync hooks, and sidecar-based voice generation boundaries.</p></article>
-          <article class="card"><h3>Music Lab and Audio</h3><p>MIDI-first Music Lab, Sound Editor, loudness helpers, mix controls, and audio workflow diagnostics.</p></article>
-          <article class="card"><h3>PPT / Presentation Pages</h3><p>Timeline-native presentation authoring for slides, media, typography, and video export paths.</p></article>
-          <article class="card"><h3>AR / PBR / 3D Compositing</h3><p>3D object preview, depth-aware placement, material controls, shadow/reflection targets, and render parity checks.</p></article>
-          <article class="card"><h3>AI Actions and Automation</h3><p>Structured action surfaces for reviewable edits, QA, catalog evidence, and local automation.</p></article>
+        <p class="section-lead">Tiger Studio combines the main timeline with focused creation rooms. Availability and product limits are stated in the full public spec.</p>
+
+        <h3 class="spec-group-title">Editing Core</h3>
+        <div class="grid spec-grid">
+          <article class="card"><h3>Timeline Video Editor</h3><p>Media pool, preview, multi-track editing, clip tools, markers, transitions, typography, effects, and contextual inspection.</p></article>
+          <article class="card"><h3>Capture and Screen Polish</h3><p>Screen capture, cursor sidecars, zoom planning, click rings, hotkey badges, framing, and polished screen-video export.</p></article>
+          <article class="card"><h3>Color, VFX, Masks, and Nodes</h3><p>Color grading, scopes, effect graphs, masks, chroma key, background tools, tracking, and comparison views.</p></article>
+          <article class="card"><h3>Project and Delivery</h3><p>Project save/load, media relink, presets, proxies, render queue, batch export, health checks, and preview/export parity QA.</p></article>
+        </div>
+
+        <h3 class="spec-group-title">Creation Rooms</h3>
+        <div class="grid spec-grid">
+          <article class="card"><h3>Motion Designer</h3><p>Keyframes, curves, behaviors, text animation, track mattes, paper collage, replicators, 2.5D camera depth, and MP4 export.</p></article>
+          <article class="card"><h3>Painter</h3><p>Editable canvas, brush strokes, layers, selection, transforms, import/export, and structured paint actions for AI-driven work.</p></article>
+          <article class="card"><h3>PPT Maker</h3><p>Templates, document tools, media and 3D actors, element animation, PPTX/PDF/MP4 export, and best-effort PPTX import.</p></article>
+          <article class="card"><h3>Composer and Music Lab</h3><p>Prompt-to-arrangement, editable sections and notes, rendered previews and stems, MIDI export, mixing, and timeline delivery.</p></article>
+          <article class="card"><h3>Sound Editor</h3><p>Audio tracks, waveform editing, cleanup and dynamics controls, automation, loudness helpers, buses, and mix diagnostics.</p></article>
+          <article class="card"><h3>Voice Lab</h3><p>Provider catalog, subtitle-to-speech, generated WAV timeline tracks, actor lip-sync, dialogue takes, and optional local voice sidecars.</p></article>
+        </div>
+
+        <h3 class="spec-group-title">Characters, Broadcast, and 3D</h3>
+        <div class="grid spec-grid">
+          <article class="card"><h3>Character Asset Hub</h3><p>Folder scanning, Live2D/Spine/MMD/VRM classification, dependency diagnostics, readiness summaries, and one-click templates.</p></article>
+          <article class="card"><h3>Character Actors</h3><p>Live2D, Spine, MMD, and VRM assets become editable actor tracks with format-specific motion, material, and render controls.</p></article>
+          <article class="card"><h3>VTuber Studio</h3><p>Performance Source, avatar mapping, internal VRM Program Output, broadcast scene composition, and live-target preflight.</p></article>
+          <article class="card"><h3>AR / PBR / 3D</h3><p>glTF/GLB/VRM preview, limited FBX conversion, PBR materials, HDR environments, gizmos, shadows, depth placement, and occlusion.</p></article>
+          <article class="card"><h3>Texture Map Lab</h3><p>Image-to-material generation and plane preview for normal, height, AO, cavity, roughness, metallic, and packed Unreal maps.</p></article>
+          <article class="card"><h3>Engine Link</h3><p>An experimental Unreal-facing bridge for structured handoff and automation. It is not presented as full engine round-trip parity.</p></article>
+        </div>
+
+        <h3 class="spec-group-title">AI, Review, and Automation</h3>
+        <div class="grid spec-grid">
+          <article class="card"><h3>Studio Actions</h3><p>Structured namespaces cover timeline, media, NLE, paint, motion, PPT, music, TTS, actors, broadcast, AR/PBR, evidence, and UI.</p></article>
+          <article class="card"><h3>Local AI Providers</h3><p>Provider boundaries support local or connected planning while keeping edits inspectable and consequential actions reviewable.</p></article>
+          <article class="card"><h3>AI Editing Workflows</h3><p>Prompt-to-edit, prompt-to-deck, prompt-to-music, dialogue takes, motion generation, and paint operations use editable project data.</p></article>
+          <article class="card"><h3>Review and QA Evidence</h3><p>Real UI captures, export bake checks, compatibility matrices, performance probes, and product reports support release claims.</p></article>
         </div>
       </div>
     </section>

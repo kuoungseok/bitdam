@@ -19,6 +19,21 @@ Local-first creator video studio for Windows.
 | **Shorts and social clips** | Captions, vertical templates, hooks, publish packages, and render queue handoff. |
 | **Voice, music, and presentation videos** | Voice Lab direction, Music Lab, subtitles, and PPT-style pages. |
 
+## Focused Creation Rooms
+
+| Room | Current public scope |
+|---|---|
+| **Motion Designer** | Keyframes, curves, text animation, track mattes, paper collage, replicators, 2.5D depth, motion blur, and MP4 output. |
+| **Painter** | Editable strokes, layers, selection, transforms, image intake/output, and structured AI paint actions. |
+| **PPT Maker** | Templates, document tools, media/3D actors, basic element animation, and PPTX/PDF/MP4 paths. |
+| **Composer / Music Lab** | Prompt-to-arrangement, editable sections and notes, preview/stem rendering, MIDI, mixing, and timeline delivery. |
+| **Voice Lab** | Provider catalog, subtitle-to-speech, timeline WAV clips, dialogue takes, and actor lip-sync through optional local providers. |
+| **Character Hub / VTuber Studio** | Character classification and readiness, actor insertion, avatar mapping, Program Output, and broadcast-scene workflows. |
+| **AR/PBR / Texture Map Lab** | 3D preview and compositing, materials, HDR lighting, depth/occlusion, gizmos, and image-to-PBR texture maps. |
+
+See the [full public product spec](docs/product_catalog/SPEC.md) for availability
+labels, optional-provider requirements, and product claim boundaries.
+
 ## Product Catalog Preview
 
 The screenshots below are shown one large image at a time so the repository

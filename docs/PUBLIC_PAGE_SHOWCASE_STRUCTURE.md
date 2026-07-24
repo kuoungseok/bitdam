@@ -240,21 +240,26 @@ Behavior:
 Purpose:
 Give users a fast map of product areas after they understand what the app can make.
 
-Cards:
+Card groups:
 
-- Timeline Video Editor
-- Screen Recording Polish
-- Character Actors
-- Voice Lab and Subtitles
-- Music Lab and Audio
-- PPT / Presentation Pages
-- AR / PBR / 3D Compositing
-- AI Actions and Automation
+- Editing Core:
+  Timeline Video Editor; Capture and Screen Polish; Color, VFX, Masks, and
+  Nodes; Project and Delivery.
+- Creation Rooms:
+  Motion Designer; Painter; PPT Maker; Composer and Music Lab; Sound Editor;
+  Voice Lab.
+- Characters, Broadcast, and 3D:
+  Character Asset Hub; Character Actors; VTuber Studio; AR/PBR/3D; Texture Map
+  Lab; Engine Link.
+- AI, Review, and Automation:
+  Studio Actions; Local AI Providers; AI Editing Workflows; Review and QA
+  Evidence.
 
 Design rules:
 
 - Keep titles short.
 - Keep text factual.
+- Group cards by workflow so the expanded catalog remains scannable.
 - This section can be card-based because it is secondary information.
 
 ## 8. Positioning
