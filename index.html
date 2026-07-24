@@ -398,14 +398,14 @@
     }
     .painter-demo-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
-      gap: clamp(24px, 4vw, 52px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(18px, 3vw, 34px);
       align-items: center;
     }
     .painter-demo-video {
       display: block;
       width: 100%;
-      aspect-ratio: 1336 / 958;
+      aspect-ratio: 16 / 9;
       border: 1px solid rgba(226, 168, 65, 0.34);
       border-radius: 8px;
       background: #000;
@@ -423,6 +423,45 @@
       font-size: 16px;
     }
     .painter-demo-copy .ko {
+      margin: 0;
+      color: rgba(199, 208, 223, 0.68);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .motion-demo-section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 82% 38%, rgba(191, 47, 37, 0.10), transparent 32%),
+        #090c11;
+    }
+    .motion-demo-layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(18px, 3vw, 34px);
+      align-items: center;
+    }
+    .motion-demo-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(210, 65, 54, 0.34);
+      border-radius: 8px;
+      background: #000;
+      object-fit: contain;
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+    }
+    .motion-demo-copy h2 {
+      margin-bottom: 12px;
+      font-size: clamp(27px, 3vw, 43px);
+      line-height: 0.98;
+    }
+    .motion-demo-copy .section-lead {
+      margin-bottom: 14px;
+      color: rgba(242, 245, 251, 0.82);
+      font-size: 16px;
+    }
+    .motion-demo-copy .ko {
       margin: 0;
       color: rgba(199, 208, 223, 0.68);
       font-size: 12px;
@@ -750,6 +789,7 @@
       .demo-layout,
       .output-pair,
       .painter-demo-layout,
+      .motion-demo-layout,
       .positioning {
         grid-template-columns: 1fr;
       }
@@ -824,10 +864,19 @@
       .painter-demo-section {
         padding: 42px 0;
       }
+      .motion-demo-section {
+        padding: 42px 0;
+      }
       .painter-demo-copy h2 {
         font-size: clamp(28px, 10vw, 42px);
       }
+      .motion-demo-copy h2 {
+        font-size: clamp(28px, 10vw, 42px);
+      }
       .painter-demo-copy .section-lead {
+        font-size: 14px;
+      }
+      .motion-demo-copy .section-lead {
         font-size: 14px;
       }
       .output-card + .output-card {
@@ -1135,6 +1184,27 @@
             <span>Oil brush strokes</span>
             <span>Editable layers</span>
             <span>20-second process</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="motion-demo-section" id="editorial-motion-graphics">
+      <div class="wrap motion-demo-layout">
+        <video class="motion-demo-video" controls playsinline preload="metadata" poster="docs/demo/tigerstudio_trump_headline_motion_demo_poster.png">
+          <source src="docs/demo/tigerstudio_trump_headline_motion_demo.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <div class="motion-demo-copy">
+          <div class="eyebrow">Editorial Motion Graphics</div>
+          <h2>Headlines, paper layers, depth, and impact.</h2>
+          <p class="section-lead">A 10-second editorial collage rendered by Tiger Studio with isolated subject layers, animated newspaper fragments, track mattes, 2.5D camera depth, motion blur, and impact timing.</p>
+          <p class="ko">Tiger Studio의 편집 가능한 레이어와 모션 기능으로 인물, 신문 조각, 헤드라인을 합성한 10초 에디토리얼 모션 그래픽입니다.</p>
+          <div class="output-meta" aria-label="Editorial motion graphics demo ingredients">
+            <span>2.5D camera</span>
+            <span>Track matte</span>
+            <span>Paper collage</span>
+            <span>Motion blur</span>
           </div>
         </div>
       </div>

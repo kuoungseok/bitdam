@@ -56,11 +56,13 @@ Avoid:
 2. Full-screen Hero
 3. What You Can Make
 4. Character Commentary Output
-5. Product Spec
-6. Positioning
-7. Release Honesty
-8. Product Walkthrough
-9. Footer
+5. AI Painter Brushwork
+6. Editorial Motion Graphics
+7. Product Spec
+8. Positioning
+9. Release Honesty
+10. Product Walkthrough
+11. Footer
 
 ## 1. Top Navigation
 
@@ -206,7 +208,34 @@ Design rules:
 - The video can be large, but the copy should stay short.
 - On mobile, keep it single-column and avoid auto playback.
 
-## 5. Product Spec
+## 5. AI Painter Brushwork
+
+Purpose:
+Show a real editable-stroke workflow driven through Tiger Studio Painter
+actions, after the core editor and character output examples.
+
+Behavior:
+
+- Match the finished Live2D sample's 16:9 display frame and desktop width.
+- Keep controls visible and do not autoplay.
+- Use the real Painter recording and its dedicated poster image.
+
+## 6. Editorial Motion Graphics
+
+Purpose:
+Show that Motion Designer can build a layered editorial result rather than
+only swapping full-frame images.
+
+Behavior:
+
+- Place the sample immediately after the Painter section.
+- Match the finished Live2D sample's 16:9 display frame and desktop width.
+- Keep controls visible and do not autoplay.
+- Describe only features visible in the rendered sample: isolated subject
+  layers, paper collage, track mattes, 2.5D depth, motion blur, and impact
+  timing.
+
+## 7. Product Spec
 
 Purpose:
 Give users a fast map of product areas after they understand what the app can make.
@@ -228,7 +257,7 @@ Design rules:
 - Keep text factual.
 - This section can be card-based because it is secondary information.
 
-## 6. Positioning
+## 8. Positioning
 
 Purpose:
 Prevent unrealistic comparisons while still making the product direction clear.
@@ -244,7 +273,7 @@ Design rules:
 - Keep this section quiet and credible.
 - Use it as a trust section, not as a hype block.
 
-## 7. Release Honesty
+## 9. Release Honesty
 
 Purpose:
 Make public claims credible and measured.
@@ -274,7 +303,7 @@ Design rules:
 - This section should be readable and restrained.
 - Avoid turning readiness scores into marketing guarantees.
 
-## 8. Product Walkthrough
+## 10. Product Walkthrough
 
 Purpose:
 This is the main visual catalog. It should feel like a scrolling studio showcase.
@@ -329,7 +358,7 @@ Design rules:
 - On mobile, the Product Walkthrough preview must fit inside the phone viewport with no horizontal scroll.
 - Do not constrain the Product Walkthrough preview to a narrow card; use the available viewport width, but never exceed it.
 
-## 9. Footer
+## 11. Footer
 
 Purpose:
 Give release continuity without distracting from the product page.
