@@ -183,8 +183,8 @@ presented as one undifferentiated window.
   undo/redo, image intake, and output.
 - Structured paint Actions allow AI-assisted brush and layer operations while
   keeping the result in the Painter document workflow.
-- The public sunflower process video uses real Tiger Studio Painter actions and
-  UI evidence.
+- The public moonlit-painting process video uses real Tiger Studio Painter
+  actions, editable generated layers, measured refinement, and UI evidence.
 
 **Limited**
 
